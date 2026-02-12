@@ -1,9 +1,9 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef, useState } from "react";
+import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import { Play, ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 /* ------------------------------------------------------------------ */
 /*  Camera Shutter / Lens SVG  – large decorative background element  */
@@ -139,7 +139,7 @@ function FloatingElement({
   y: string;
   size: number;
   type: "circle" | "line" | "ring";
-  scrollProgress: ReturnType<typeof useTransform>;
+  scrollProgress: MotionValue<number>;
   speed: number;
 }) {
   const yOffset = useTransform(scrollProgress, [0, 1], [0, speed]);
@@ -210,19 +210,21 @@ function StatItem({
 export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const [isHoveredPrimary, setIsHoveredPrimary] = useState(false);
+  const isMobile = useIsMobile();
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
   });
 
-  const shutterRotate = useTransform(scrollYProgress, [0, 1], [0, 90]);
-  const shutterScale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
+  // Disable parallax on mobile for performance
+  const shutterRotate = useTransform(scrollYProgress, [0, 1], [0, isMobile ? 0 : 90]);
+  const shutterScale = useTransform(scrollYProgress, [0, 1], [1, isMobile ? 1 : 1.15]);
   const shutterOpacity = useTransform(scrollYProgress, [0, 0.6], [0.06, 0]);
-  const headlineY = useTransform(scrollYProgress, [0, 1], [0, -80]);
-  const subY = useTransform(scrollYProgress, [0, 1], [0, -40]);
-  const statsY = useTransform(scrollYProgress, [0, 1], [0, 60]);
-  const glowScale = useTransform(scrollYProgress, [0, 0.5], [1, 1.4]);
+  const headlineY = useTransform(scrollYProgress, [0, 1], [0, isMobile ? 0 : -80]);
+  const subY = useTransform(scrollYProgress, [0, 1], [0, isMobile ? 0 : -40]);
+  const statsY = useTransform(scrollYProgress, [0, 1], [0, isMobile ? 0 : 60]);
+  const glowScale = useTransform(scrollYProgress, [0, 0.5], [1, isMobile ? 1 : 1.4]);
 
   /* Track scroll for floating elements */
   const floatProgress = useTransform(scrollYProgress, [0, 1], [0, 1]);
@@ -327,71 +329,75 @@ export function HeroSection() {
         <ShutterDecoration />
       </motion.div>
 
-      {/* Floating geometric elements */}
-      <FloatingElement
-        x="8%"
-        y="18%"
-        size={100}
-        type="circle"
-        scrollProgress={floatProgress}
-        speed={-120}
-      />
-      <FloatingElement
-        x="85%"
-        y="25%"
-        size={60}
-        type="ring"
-        scrollProgress={floatProgress}
-        speed={-80}
-      />
-      <FloatingElement
-        x="15%"
-        y="70%"
-        size={150}
-        type="line"
-        scrollProgress={floatProgress}
-        speed={100}
-      />
-      <FloatingElement
-        x="78%"
-        y="65%"
-        size={80}
-        type="circle"
-        scrollProgress={floatProgress}
-        speed={-60}
-      />
-      <FloatingElement
-        x="92%"
-        y="50%"
-        size={200}
-        type="line"
-        scrollProgress={floatProgress}
-        speed={140}
-      />
-      <FloatingElement
-        x="3%"
-        y="45%"
-        size={40}
-        type="ring"
-        scrollProgress={floatProgress}
-        speed={-100}
-      />
-      <FloatingElement
-        x="50%"
-        y="12%"
-        size={70}
-        type="circle"
-        scrollProgress={floatProgress}
-        speed={-50}
-      />
-      <FloatingElement
-        x="35%"
-        y="80%"
-        size={120}
-        type="line"
-        scrollProgress={floatProgress}
-        speed={80}
-      />
+      {/* Floating geometric elements — hidden on mobile for performance */}
+      {!isMobile && (
+        <>
+          <FloatingElement
+            x="8%"
+            y="18%"
+            size={100}
+            type="circle"
+            scrollProgress={floatProgress}
+            speed={-120}
+          />
+          <FloatingElement
+            x="85%"
+            y="25%"
+            size={60}
+            type="ring"
+            scrollProgress={floatProgress}
+            speed={-80}
+          />
+          <FloatingElement
+            x="15%"
+            y="70%"
+            size={150}
+            type="line"
+            scrollProgress={floatProgress}
+            speed={100}
+          />
+          <FloatingElement
+            x="78%"
+            y="65%"
+            size={80}
+            type="circle"
+            scrollProgress={floatProgress}
+            speed={-60}
+          />
+          <FloatingElement
+            x="92%"
+            y="50%"
+            size={200}
+            type="line"
+            scrollProgress={floatProgress}
+            speed={140}
+          />
+          <FloatingElement
+            x="3%"
+            y="45%"
+            size={40}
+            type="ring"
+            scrollProgress={floatProgress}
+            speed={-100}
+          />
+          <FloatingElement
+            x="50%"
+            y="12%"
+            size={70}
+            type="circle"
+            scrollProgress={floatProgress}
+            speed={-50}
+          />
+          <FloatingElement
+            x="35%"
+            y="80%"
+            size={120}
+            type="line"
+            scrollProgress={floatProgress}
+            speed={80}
+          />
+        </>
+      )}
 
       {/* Horizontal scan lines */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
