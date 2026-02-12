@@ -7,6 +7,7 @@ import { CTASection } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
 
 export default function Page() {
+  // Force deployment update
   return (
     <main className="relative min-h-screen bg-background">
       <Navigation />
