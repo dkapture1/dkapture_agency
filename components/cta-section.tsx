@@ -1,10 +1,10 @@
 "use client";
 
-import React from "react"
+import React from "react";
 
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { Check, ArrowRight } from "lucide-react";
+import { Check, ArrowRight, Loader2, MessageCircle, CheckCircle2 } from "lucide-react";
 
 const businessTypes = [
   "Home Services",
@@ -29,6 +29,8 @@ const checklist = [
   "Custom action plan delivered",
 ];
 
+type FormStatus = "idle" | "loading" | "success" | "error";
+
 export function CTASection() {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
@@ -39,10 +41,41 @@ export function CTASection() {
     revenue: "",
     goals: "",
   });
+  const [status, setStatus] = useState<FormStatus>("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [whatsappLink, setWhatsappLink] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string[]>>({});
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
+    setStatus("loading");
+    setErrorMessage("");
+    setFieldErrors({});
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formState),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        if (data.details) {
+          setFieldErrors(data.details);
+        }
+        throw new Error(data.error || "Something went wrong");
+      }
+
+      setStatus("success");
+      setWhatsappLink(data.whatsappLink || "");
+    } catch (err) {
+      setStatus("error");
+      setErrorMessage(
+        err instanceof Error ? err.message : "Something went wrong. Please try again."
+      );
+    }
   };
 
   return (
@@ -220,146 +253,240 @@ export function CTASection() {
 
               {/* Inner card */}
               <div className="relative rounded-2xl bg-[#111111] p-8 lg:p-10">
-                <h3 className="font-display text-2xl font-bold tracking-wide text-foreground mb-2">
-                  Book Your Strategy Call
-                </h3>
-                <p className="text-sm text-muted-foreground mb-8">
-                  Fill out the form and {"we'll"} get back to you within 24 hours.
-                </p>
-
-                <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-                  {/* Name */}
-                  <div>
-                    <label
-                      htmlFor="cta-name"
-                      className="block text-xs font-medium tracking-wider uppercase text-muted-foreground mb-2"
-                    >
-                      Name
-                    </label>
-                    <input
-                      id="cta-name"
-                      type="text"
-                      placeholder="Your full name"
-                      value={formState.name}
-                      onChange={(e) =>
-                        setFormState({ ...formState, name: e.target.value })
-                      }
-                      className="w-full rounded-lg border border-foreground/10 bg-[#0a0a0a] px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground/50 transition-all duration-300 focus:border-[#FF4500] focus:outline-none focus:shadow-[0_0_20px_rgba(255,69,0,0.1)]"
-                    />
-                  </div>
-
-                  {/* Email */}
-                  <div>
-                    <label
-                      htmlFor="cta-email"
-                      className="block text-xs font-medium tracking-wider uppercase text-muted-foreground mb-2"
-                    >
-                      Email
-                    </label>
-                    <input
-                      id="cta-email"
-                      type="email"
-                      placeholder="your@email.com"
-                      value={formState.email}
-                      onChange={(e) =>
-                        setFormState({ ...formState, email: e.target.value })
-                      }
-                      className="w-full rounded-lg border border-foreground/10 bg-[#0a0a0a] px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground/50 transition-all duration-300 focus:border-[#FF4500] focus:outline-none focus:shadow-[0_0_20px_rgba(255,69,0,0.1)]"
-                    />
-                  </div>
-
-                  {/* Business Type */}
-                  <div>
-                    <label
-                      htmlFor="cta-business"
-                      className="block text-xs font-medium tracking-wider uppercase text-muted-foreground mb-2"
-                    >
-                      Business Type
-                    </label>
-                    <select
-                      id="cta-business"
-                      value={formState.businessType}
-                      onChange={(e) =>
-                        setFormState({
-                          ...formState,
-                          businessType: e.target.value,
-                        })
-                      }
-                      className="w-full rounded-lg border border-foreground/10 bg-[#0a0a0a] px-4 py-3.5 text-sm text-foreground transition-all duration-300 focus:border-[#FF4500] focus:outline-none focus:shadow-[0_0_20px_rgba(255,69,0,0.1)] appearance-none cursor-pointer"
-                    >
-                      <option value="" disabled className="text-muted-foreground">
-                        Select your industry
-                      </option>
-                      {businessTypes.map((type) => (
-                        <option key={type} value={type} className="bg-[#0a0a0a]">
-                          {type}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
-                  {/* Monthly Revenue */}
-                  <div>
-                    <label
-                      htmlFor="cta-revenue"
-                      className="block text-xs font-medium tracking-wider uppercase text-muted-foreground mb-2"
-                    >
-                      Monthly Revenue Range
-                    </label>
-                    <select
-                      id="cta-revenue"
-                      value={formState.revenue}
-                      onChange={(e) =>
-                        setFormState({ ...formState, revenue: e.target.value })
-                      }
-                      className="w-full rounded-lg border border-foreground/10 bg-[#0a0a0a] px-4 py-3.5 text-sm text-foreground transition-all duration-300 focus:border-[#FF4500] focus:outline-none focus:shadow-[0_0_20px_rgba(255,69,0,0.1)] appearance-none cursor-pointer"
-                    >
-                      <option value="" disabled className="text-muted-foreground">
-                        Select range
-                      </option>
-                      {revenueRanges.map((range) => (
-                        <option
-                          key={range}
-                          value={range}
-                          className="bg-[#0a0a0a]"
-                        >
-                          {range}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
-                  {/* Goals textarea */}
-                  <div>
-                    <label
-                      htmlFor="cta-goals"
-                      className="block text-xs font-medium tracking-wider uppercase text-muted-foreground mb-2"
-                    >
-                      Tell us about your goals
-                    </label>
-                    <textarea
-                      id="cta-goals"
-                      rows={4}
-                      placeholder="What are you looking to achieve? What challenges are you facing?"
-                      value={formState.goals}
-                      onChange={(e) =>
-                        setFormState({ ...formState, goals: e.target.value })
-                      }
-                      className="w-full rounded-lg border border-foreground/10 bg-[#0a0a0a] px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground/50 transition-all duration-300 focus:border-[#FF4500] focus:outline-none focus:shadow-[0_0_20px_rgba(255,69,0,0.1)] resize-none"
-                    />
-                  </div>
-
-                  {/* Submit */}
-                  <motion.button
-                    type="submit"
-                    className="group mt-2 w-full flex items-center justify-center gap-3 rounded-full bg-[#FF4500] px-8 py-4 text-base font-bold text-foreground transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,69,0,0.4)]"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
+                {status === "success" ? (
+                  /* ===== SUCCESS STATE ===== */
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="flex flex-col items-center text-center py-8"
                   >
-                    Book My Strategy Call
-                    <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                  </motion.button>
-                </form>
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#FF4500]/15 mb-6">
+                      <CheckCircle2 className="h-8 w-8 text-[#FF4500]" />
+                    </div>
+                    <h3 className="font-display text-2xl font-bold text-foreground mb-3">
+                      Request Received!
+                    </h3>
+                    <p className="text-muted-foreground mb-8 max-w-sm">
+                      {"We'll"} get back to you within 24 hours. For a faster response, reach us on WhatsApp:
+                    </p>
+                    {whatsappLink && (
+                      <a
+                        href={whatsappLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group inline-flex items-center gap-3 rounded-full bg-[#25D366] px-8 py-4 text-base font-bold text-white transition-all duration-300 hover:shadow-[0_0_30px_rgba(37,211,102,0.4)]"
+                      >
+                        <MessageCircle className="h-5 w-5" />
+                        Chat on WhatsApp
+                      </a>
+                    )}
+                    <button
+                      onClick={() => {
+                        setStatus("idle");
+                        setFormState({ name: "", email: "", businessType: "", revenue: "", goals: "" });
+                      }}
+                      className="mt-6 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      Submit another request
+                    </button>
+                  </motion.div>
+                ) : (
+                  /* ===== FORM STATE ===== */
+                  <>
+                    <h3 className="font-display text-2xl font-bold tracking-wide text-foreground mb-2">
+                      Book Your Strategy Call
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-8">
+                      Fill out the form and {"we'll"} get back to you within 24 hours.
+                    </p>
+
+                    <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                      {/* Name */}
+                      <div>
+                        <label
+                          htmlFor="cta-name"
+                          className="block text-xs font-medium tracking-wider uppercase text-muted-foreground mb-2"
+                        >
+                          Name
+                        </label>
+                        <input
+                          id="cta-name"
+                          type="text"
+                          inputMode="text"
+                          autoComplete="name"
+                          placeholder="Your full name"
+                          value={formState.name}
+                          onChange={(e) =>
+                            setFormState({ ...formState, name: e.target.value })
+                          }
+                          disabled={status === "loading"}
+                          className="w-full rounded-lg border border-foreground/10 bg-[#0a0a0a] px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground/50 transition-all duration-300 focus:border-[#FF4500] focus:outline-none focus:shadow-[0_0_20px_rgba(255,69,0,0.1)] disabled:opacity-50"
+                        />
+                        {fieldErrors.name && (
+                          <p className="mt-1.5 text-xs text-red-400">{fieldErrors.name[0]}</p>
+                        )}
+                      </div>
+
+                      {/* Email */}
+                      <div>
+                        <label
+                          htmlFor="cta-email"
+                          className="block text-xs font-medium tracking-wider uppercase text-muted-foreground mb-2"
+                        >
+                          Email
+                        </label>
+                        <input
+                          id="cta-email"
+                          type="email"
+                          inputMode="email"
+                          autoComplete="email"
+                          placeholder="your@email.com"
+                          value={formState.email}
+                          onChange={(e) =>
+                            setFormState({ ...formState, email: e.target.value })
+                          }
+                          disabled={status === "loading"}
+                          className="w-full rounded-lg border border-foreground/10 bg-[#0a0a0a] px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground/50 transition-all duration-300 focus:border-[#FF4500] focus:outline-none focus:shadow-[0_0_20px_rgba(255,69,0,0.1)] disabled:opacity-50"
+                        />
+                        {fieldErrors.email && (
+                          <p className="mt-1.5 text-xs text-red-400">{fieldErrors.email[0]}</p>
+                        )}
+                      </div>
+
+                      {/* Business Type */}
+                      <div>
+                        <label
+                          htmlFor="cta-business"
+                          className="block text-xs font-medium tracking-wider uppercase text-muted-foreground mb-2"
+                        >
+                          Business Type
+                        </label>
+                        <select
+                          id="cta-business"
+                          value={formState.businessType}
+                          onChange={(e) =>
+                            setFormState({
+                              ...formState,
+                              businessType: e.target.value,
+                            })
+                          }
+                          disabled={status === "loading"}
+                          className="w-full rounded-lg border border-foreground/10 bg-[#0a0a0a] px-4 py-3.5 text-sm text-foreground transition-all duration-300 focus:border-[#FF4500] focus:outline-none focus:shadow-[0_0_20px_rgba(255,69,0,0.1)] appearance-none cursor-pointer disabled:opacity-50"
+                        >
+                          <option value="" disabled className="text-muted-foreground">
+                            Select your industry
+                          </option>
+                          {businessTypes.map((type) => (
+                            <option key={type} value={type} className="bg-[#0a0a0a]">
+                              {type}
+                            </option>
+                          ))}
+                        </select>
+                        {fieldErrors.businessType && (
+                          <p className="mt-1.5 text-xs text-red-400">{fieldErrors.businessType[0]}</p>
+                        )}
+                      </div>
+
+                      {/* Monthly Revenue */}
+                      <div>
+                        <label
+                          htmlFor="cta-revenue"
+                          className="block text-xs font-medium tracking-wider uppercase text-muted-foreground mb-2"
+                        >
+                          Monthly Revenue Range
+                        </label>
+                        <select
+                          id="cta-revenue"
+                          value={formState.revenue}
+                          onChange={(e) =>
+                            setFormState({ ...formState, revenue: e.target.value })
+                          }
+                          disabled={status === "loading"}
+                          className="w-full rounded-lg border border-foreground/10 bg-[#0a0a0a] px-4 py-3.5 text-sm text-foreground transition-all duration-300 focus:border-[#FF4500] focus:outline-none focus:shadow-[0_0_20px_rgba(255,69,0,0.1)] appearance-none cursor-pointer disabled:opacity-50"
+                        >
+                          <option value="" disabled className="text-muted-foreground">
+                            Select range
+                          </option>
+                          {revenueRanges.map((range) => (
+                            <option
+                              key={range}
+                              value={range}
+                              className="bg-[#0a0a0a]"
+                            >
+                              {range}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+
+                      {/* Goals textarea */}
+                      <div>
+                        <label
+                          htmlFor="cta-goals"
+                          className="block text-xs font-medium tracking-wider uppercase text-muted-foreground mb-2"
+                        >
+                          Tell us about your goals
+                        </label>
+                        <textarea
+                          id="cta-goals"
+                          rows={4}
+                          placeholder="What are you looking to achieve? What challenges are you facing?"
+                          value={formState.goals}
+                          onChange={(e) =>
+                            setFormState({ ...formState, goals: e.target.value })
+                          }
+                          disabled={status === "loading"}
+                          className="w-full rounded-lg border border-foreground/10 bg-[#0a0a0a] px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground/50 transition-all duration-300 focus:border-[#FF4500] focus:outline-none focus:shadow-[0_0_20px_rgba(255,69,0,0.1)] resize-none disabled:opacity-50"
+                        />
+                      </div>
+
+                      {/* Error message */}
+                      {status === "error" && (
+                        <motion.p
+                          initial={{ opacity: 0, y: -5 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className="text-sm text-red-400 text-center"
+                        >
+                          {errorMessage}
+                        </motion.p>
+                      )}
+
+                      {/* Submit */}
+                      <motion.button
+                        type="submit"
+                        disabled={status === "loading"}
+                        className="group mt-2 w-full flex items-center justify-center gap-3 rounded-full bg-[#FF4500] px-8 py-4 text-base font-bold text-foreground transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,69,0,0.4)] disabled:opacity-70 disabled:cursor-not-allowed"
+                        whileHover={status !== "loading" ? { scale: 1.02 } : {}}
+                        whileTap={status !== "loading" ? { scale: 0.98 } : {}}
+                      >
+                        {status === "loading" ? (
+                          <>
+                            <Loader2 className="h-5 w-5 animate-spin" />
+                            Sending...
+                          </>
+                        ) : (
+                          <>
+                            Book My Strategy Call
+                            <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                          </>
+                        )}
+                      </motion.button>
+
+                      {/* WhatsApp alternative */}
+                      <p className="text-center text-xs text-muted-foreground/60 mt-1">
+                        Prefer WhatsApp?{" "}
+                        <a
+                          href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "13055550123"}?text=${encodeURIComponent("Hi! I'd like to discuss my project with Dkapture.")}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#25D366] hover:underline"
+                        >
+                          Message us directly
+                        </a>
+                      </p>
+                    </form>
+                  </>
+                )}
               </div>
             </div>
           </motion.div>

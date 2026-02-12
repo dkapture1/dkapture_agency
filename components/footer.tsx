@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ShutterIcon } from "./shutter-icon";
-import { Copy, Check } from "lucide-react";
+import { Copy, Check, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const ecosystemLinks = [
@@ -62,8 +62,12 @@ const socialLinks = [
 
 const email = "hello@dkapture.com";
 
+type NewsletterStatus = "idle" | "loading" | "success" | "error";
+
 export function Footer() {
   const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [newsletterStatus, setNewsletterStatus] = useState<NewsletterStatus>("idle");
+  const [newsletterMessage, setNewsletterMessage] = useState("");
   const [emailCopied, setEmailCopied] = useState(false);
 
   const copyEmail = () => {
@@ -85,26 +89,69 @@ export function Footer() {
               Get AI marketing insights weekly
             </p>
             <form
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
-                setNewsletterEmail("");
+                setNewsletterStatus("loading");
+                try {
+                  const res = await fetch("/api/newsletter", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email: newsletterEmail }),
+                  });
+                  const data = await res.json();
+                  if (!res.ok) throw new Error(data.error);
+                  setNewsletterStatus("success");
+                  setNewsletterMessage(data.message);
+                  setNewsletterEmail("");
+                } catch (err) {
+                  setNewsletterStatus("error");
+                  setNewsletterMessage(
+                    err instanceof Error ? err.message : "Something went wrong."
+                  );
+                }
               }}
-              className="flex w-full sm:w-auto gap-3"
+              className="flex w-full sm:w-auto gap-3 items-center"
             >
-              <input
-                type="email"
-                placeholder="your@email.com"
-                value={newsletterEmail}
-                onChange={(e) => setNewsletterEmail(e.target.value)}
-                className="w-full sm:w-72 rounded-full border border-foreground/10 bg-[#0a0a0a] px-5 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 transition-all duration-300 focus:border-[#FF4500] focus:outline-none focus:shadow-[0_0_15px_rgba(255,69,0,0.1)]"
-                aria-label="Email for newsletter"
-              />
-              <button
-                type="submit"
-                className="shrink-0 rounded-full bg-[#FF4500] px-6 py-3 text-sm font-semibold text-foreground transition-all duration-300 hover:shadow-[0_0_25px_rgba(255,69,0,0.3)]"
-              >
-                Subscribe
-              </button>
+              {newsletterStatus === "success" ? (
+                <p className="text-sm text-[#FF4500] font-medium flex items-center gap-2">
+                  <Check className="h-4 w-4" />
+                  {newsletterMessage}
+                </p>
+              ) : (
+                <>
+                  <input
+                    type="email"
+                    inputMode="email"
+                    placeholder="your@email.com"
+                    value={newsletterEmail}
+                    onChange={(e) => {
+                      setNewsletterEmail(e.target.value);
+                      if (newsletterStatus === "error") setNewsletterStatus("idle");
+                    }}
+                    disabled={newsletterStatus === "loading"}
+                    className={`w-full sm:w-72 rounded-full border bg-[#0a0a0a] px-5 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 transition-all duration-300 focus:outline-none focus:shadow-[0_0_15px_rgba(255,69,0,0.1)] disabled:opacity-50 ${
+                      newsletterStatus === "error"
+                        ? "border-red-400 focus:border-red-400"
+                        : "border-foreground/10 focus:border-[#FF4500]"
+                    }`}
+                    aria-label="Email for newsletter"
+                  />
+                  <button
+                    type="submit"
+                    disabled={newsletterStatus === "loading"}
+                    className="shrink-0 rounded-full bg-[#FF4500] px-6 py-3 text-sm font-semibold text-foreground transition-all duration-300 hover:shadow-[0_0_25px_rgba(255,69,0,0.3)] disabled:opacity-70 flex items-center gap-2"
+                  >
+                    {newsletterStatus === "loading" ? (
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                    ) : (
+                      "Subscribe"
+                    )}
+                  </button>
+                </>
+              )}
+              {newsletterStatus === "error" && (
+                <p className="text-xs text-red-400 mt-1">{newsletterMessage}</p>
+              )}
             </form>
           </div>
         </div>

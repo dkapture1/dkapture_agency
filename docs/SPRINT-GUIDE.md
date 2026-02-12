@@ -43,7 +43,7 @@ git diff v0.2.0-sprint-0..HEAD
 
 | Sprint | Focus | Duration | Status |
 |--------|-------|----------|--------|
-| [Sprint 0](./sprints/SPRINT-0.md) | Critical Fixes & Foundation | 2-3 days | Pending |
+| [Sprint 0](./sprints/SPRINT-0.md) | Critical Fixes & Foundation | 2-3 days | DONE |
 | [Sprint 1](./sprints/SPRINT-1.md) | Backend & Conversion | 3-4 days | Pending |
 | [Sprint 2](./sprints/SPRINT-2.md) | Full Internationalization | 4-5 days | Pending |
 | [Sprint 3](./sprints/SPRINT-3.md) | Service Pages | 5-6 days | Pending |
