@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import { Play, ArrowRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useTranslations } from "next-intl";
 
 /* ------------------------------------------------------------------ */
 /*  Camera Shutter / Lens SVG  – large decorative background element  */
@@ -208,6 +209,7 @@ function StatItem({
 /*  Main Hero                                                         */
 /* ------------------------------------------------------------------ */
 export function HeroSection() {
+  const t = useTranslations('hero');
   const sectionRef = useRef<HTMLElement>(null);
   const [isHoveredPrimary, setIsHoveredPrimary] = useState(false);
   const isMobile = useIsMobile();
@@ -230,9 +232,9 @@ export function HeroSection() {
   const floatProgress = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   const stats = [
-    { value: "500+", label: "Projects Delivered" },
-    { value: "$12M+", label: "Ad Spend Managed" },
-    { value: "3", label: "Countries" },
+    { value: t("stat1Value"), label: t("stat1Label") },
+    { value: t("stat2Value"), label: t("stat2Label") },
+    { value: t("stat3Value"), label: t("stat3Label") },
   ];
 
   /* Staggered animation variants */
@@ -436,7 +438,7 @@ export function HeroSection() {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-[#FF4500]" />
               </span>
               <span className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground">
-                AI-Powered Digital Agency
+                {t("badge")}
               </span>
             </div>
           </motion.div>
@@ -448,13 +450,13 @@ export function HeroSection() {
                 variants={lineVariants}
                 className="block text-4xl text-foreground sm:text-6xl lg:text-[5.5rem] xl:text-[6.5rem]"
               >
-                {"We Don't Just Capture"}
+                {t("headline1")}
               </motion.span>
               <motion.span
                 variants={lineVariants}
                 className="block text-4xl text-foreground sm:text-6xl lg:text-[5.5rem] xl:text-[6.5rem]"
               >
-                Your Image
+                {t("headline2")}
               </motion.span>
               <motion.span
                 variants={lineVariants}
@@ -467,7 +469,7 @@ export function HeroSection() {
                   backgroundClip: "text",
                 }}
               >
-                We Build Your
+                {t("headline3")}
               </motion.span>
               <motion.span
                 variants={lineVariants}
@@ -480,7 +482,7 @@ export function HeroSection() {
                   backgroundClip: "text",
                 }}
               >
-                Digital Empire
+                {t("headline4")}
               </motion.span>
             </motion.h1>
           </motion.div>
@@ -491,8 +493,7 @@ export function HeroSection() {
               variants={fadeUpVariants}
               className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg lg:mt-10 lg:text-xl"
             >
-              AI-powered marketing ecosystem for Brazilian entrepreneurs
-              conquering the American market
+              {t("subheadline")}
             </motion.p>
           </motion.div>
 
@@ -521,7 +522,7 @@ export function HeroSection() {
                 animate={isHoveredPrimary ? { translateX: "100%" } : { translateX: "-100%" }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
               />
-              <span className="relative z-10">Start Your Transformation</span>
+              <span className="relative z-10">{t("ctaPrimary")}</span>
               <ArrowRight className="relative z-10 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </motion.a>
 
@@ -535,7 +536,7 @@ export function HeroSection() {
               <span className="relative flex h-8 w-8 items-center justify-center rounded-full border border-foreground/20 transition-all duration-300 group-hover:border-foreground/40 group-hover:bg-foreground/10">
                 <Play className="h-3 w-3 fill-foreground text-foreground ml-0.5" />
               </span>
-              Watch Our Reel
+              {t("ctaSecondary")}
             </motion.a>
           </motion.div>
         </motion.div>

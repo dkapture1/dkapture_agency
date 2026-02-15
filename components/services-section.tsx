@@ -11,74 +11,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { ShutterIcon } from "./shutter-icon";
-
-const services = [
-  {
-    icon: Camera,
-    title: "Brand Identity & Image",
-    description:
-      "We craft the visual DNA that makes your brand unmistakable in the American market.",
-    bullets: [
-      "Logo & Visual Identity Systems",
-      "Professional Photography",
-      "Image Consulting & Personal Branding",
-      "Brand Strategy & Positioning",
-    ],
-    span: "col",
-  },
-  {
-    icon: Globe,
-    title: "Digital Platforms",
-    description:
-      "High-converting digital experiences built for performance and scale.",
-    bullets: [
-      "Custom Web Design & Development",
-      "E-commerce & Shopify Solutions",
-      "SEO & Technical Optimization",
-      "Landing Pages & Funnels",
-    ],
-    span: "col",
-  },
-  {
-    icon: Film,
-    title: "Visual Storytelling",
-    description:
-      "Cinematic content that captures attention and drives engagement.",
-    bullets: [
-      "Video Production & Editing",
-      "Aerial Drone Cinematography",
-      "Motion Graphics & Animation",
-      "Social Media Content Packages",
-    ],
-    span: "col",
-  },
-  {
-    icon: TrendingUp,
-    title: "Growth & Performance",
-    description:
-      "Data-driven campaigns that turn ad spend into predictable revenue.",
-    bullets: [
-      "Google Ads Management",
-      "Meta & TikTok Ads",
-      "CRM Automation & Email Flows",
-      "Conversion Rate Optimization",
-    ],
-    span: "col",
-  },
-  {
-    icon: Brain,
-    title: "AI Intelligence Lab",
-    description:
-      "Proprietary AI tools built specifically for bilingual businesses. This is where technology meets cultural intelligence.",
-    bullets: [
-      "Bilingual AI Chatbots (EN/PT)",
-      "Predictive Analytics & Market Trends",
-      "AI-Powered Content Generation",
-      "Automated Audience Segmentation",
-    ],
-    span: "featured",
-  },
-];
+import { useTranslations } from "next-intl";
 
 /* Dashed connection lines between cards */
 function ConnectionLines() {
@@ -123,8 +56,48 @@ function ConnectionLines() {
 }
 
 export function ServicesSection() {
+  const t = useTranslations('services');
+  const tc = useTranslations('common');
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+
+  const services = [
+    {
+      icon: Camera,
+      title: t("brandIdentity"),
+      description: t("brandIdentityDesc"),
+      bullets: [t("brandIdentityBullet1"), t("brandIdentityBullet2"), t("brandIdentityBullet3"), t("brandIdentityBullet4")],
+      span: "col",
+    },
+    {
+      icon: Globe,
+      title: t("digitalPlatforms"),
+      description: t("digitalPlatformsDesc"),
+      bullets: [t("digitalPlatformsBullet1"), t("digitalPlatformsBullet2"), t("digitalPlatformsBullet3"), t("digitalPlatformsBullet4")],
+      span: "col",
+    },
+    {
+      icon: Film,
+      title: t("visualStorytelling"),
+      description: t("visualStorytellingDesc"),
+      bullets: [t("visualStorytellingBullet1"), t("visualStorytellingBullet2"), t("visualStorytellingBullet3"), t("visualStorytellingBullet4")],
+      span: "col",
+    },
+    {
+      icon: TrendingUp,
+      title: t("growthPerformance"),
+      description: t("growthPerformanceDesc"),
+      bullets: [t("growthPerformanceBullet1"), t("growthPerformanceBullet2"), t("growthPerformanceBullet3"), t("growthPerformanceBullet4")],
+      span: "col",
+    },
+    {
+      icon: Brain,
+      title: t("aiLab"),
+      description: t("aiLabDesc"),
+      bullets: [t("aiLabBullet1"), t("aiLabBullet2"), t("aiLabBullet3"), t("aiLabBullet4")],
+      span: "featured",
+    },
+  ];
 
   const containerVariants = {
     hidden: {},
@@ -187,13 +160,12 @@ export function ServicesSection() {
         >
           <div className="flex items-center gap-6 mb-8">
             <h2 className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold tracking-tight text-foreground">
-              The Ecosystem
+              {t("sectionTag")}
             </h2>
             <span className="hidden sm:block h-px flex-1 bg-[#FF4500]" />
           </div>
           <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Five interconnected pillars powering your digital transformation.
-            Each one designed to amplify the others.
+            {t("description")}
           </p>
         </motion.div>
 
@@ -274,7 +246,7 @@ export function ServicesSection() {
                             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#FF4500] opacity-75" />
                             <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#FF4500]" />
                           </span>
-                          Powered by AI
+                          {t("poweredByAi")}
                         </span>
                       )}
                     </div>
@@ -313,7 +285,7 @@ export function ServicesSection() {
                       href="#"
                       className="group/link inline-flex items-center gap-2 text-sm font-medium text-[#FF4500] transition-all duration-300 hover:gap-3"
                     >
-                      Learn More
+                      {tc("learnMore")}
                       <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-1" />
                     </a>
                   </div>

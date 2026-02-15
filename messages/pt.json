@@ -1,10 +1,56 @@
 {
+  "metadata": {
+    "title": "DKAPTURE | Agencia de Marketing Digital com IA",
+    "description": "Agencia de marketing digital potencializada por IA para empreendedores brasileiros nos EUA. Construimos seu imperio digital com storytelling visual, anuncios de performance e automacao inteligente.",
+    "ogTitle": "DKAPTURE | Agencia de Marketing Digital com IA",
+    "ogDescription": "Construimos seu imperio digital com storytelling visual, anuncios de performance e automacao com IA. Para empreendedores brasileiros conquistando o mercado americano."
+  },
   "navigation": {
     "ecosystem": "Ecossistema",
     "portfolio": "Portfolio",
     "aiLab": "AI Lab",
     "insights": "Insights",
     "startProject": "Inicie Seu Projeto"
+  },
+  "error": {
+    "title": "Algo deu errado",
+    "description": "Pedimos desculpas pelo inconveniente. Por favor, tente novamente.",
+    "retry": "Tentar novamente",
+    "goHome": "Ir para o Início"
+  },
+  "notFound": {
+    "title": "Página Não Encontrada",
+    "description": "A página que você está procurando não existe ou foi movida.",
+    "goHome": "Ir para o Início"
+  },
+  "common": {
+    "learnMore": "Saiba Mais",
+    "getStarted": "Começar",
+    "contactUs": "Fale Conosco",
+    "backToTop": "Voltar ao Topo",
+    "home": "Início",
+    "copyLink": "Copiar Link",
+    "shareOnLinkedIn": "Compartilhar no LinkedIn",
+    "shareOnTwitter": "Compartilhar no Twitter",
+    "linkCopied": "Link Copiado!"
+  },
+  "serviceSections": {
+    "theChallenge": "O Desafio",
+    "ourSolution": "Nossa Solução",
+    "pricingPlans": "Planos & Preços",
+    "pricingDescription": "Preços claros e transparentes. Sem taxas ocultas.",
+    "mostPopular": "MAIS POPULAR",
+    "whatsIncluded": "O Que Está Incluso",
+    "ourProcess": "Nosso Processo",
+    "faq": "Perguntas Frequentes",
+    "ctaTitle": "Pronto para transformar seu negócio?",
+    "ctaDescription": "Vamos construir algo extraordinário juntos.",
+    "successStories": "Cases de Sucesso",
+    "viewAllWork": "Ver todos os trabalhos",
+    "featuredCaseStudy": "Case em Destaque",
+    "caseStudyPlaceholder": "Veja como ajudamos essa marca a alcançar resultados excepcionais com nossa abordagem estratégica.",
+    "viewCaseStudy": "Ver Case Completo",
+    "the": "O"
   },
   "hero": {
     "badge": "Agencia Digital Potencializada por IA",
@@ -24,22 +70,42 @@
   },
   "services": {
     "sectionTag": "O Ecossistema",
-    "title1": "SOLUCOES",
-    "title2": "INTEGRADAS",
-    "description": "Cada servico e um no em um sistema conectado. Da identidade visual ao crescimento com IA, cada elemento amplifica os outros.",
+    "description": "Cinco pilares interconectados impulsionando sua transformacao digital. Cada um projetado para amplificar os outros.",
+    "poweredByAi": "Potencializado por IA",
     "brandIdentity": "Identidade Visual & Imagem",
-    "brandIdentityDesc": "Logo, fotografia e identidade visual que posiciona sua marca como premium no mercado americano.",
+    "brandIdentityDesc": "Criamos o DNA visual que torna sua marca inconfundivel no mercado americano.",
+    "brandIdentityBullet1": "Logo & Sistemas de Identidade Visual",
+    "brandIdentityBullet2": "Fotografia Profissional",
+    "brandIdentityBullet3": "Consultoria de Imagem & Personal Branding",
+    "brandIdentityBullet4": "Estrategia & Posicionamento de Marca",
     "digitalPlatforms": "Plataformas Digitais",
-    "digitalPlatformsDesc": "Sites e e-commerces de alta conversao, construidos para velocidade, SEO e experiencia do usuario.",
+    "digitalPlatformsDesc": "Experiencias digitais de alta conversao construidas para performance e escala.",
+    "digitalPlatformsBullet1": "Web Design & Desenvolvimento Personalizado",
+    "digitalPlatformsBullet2": "E-commerce & Solucoes Shopify",
+    "digitalPlatformsBullet3": "SEO & Otimizacao Tecnica",
+    "digitalPlatformsBullet4": "Landing Pages & Funis",
     "visualStorytelling": "Storytelling Visual",
-    "visualStorytellingDesc": "Producao de video cinematografico, imagens com drone e motion graphics que cativam seu publico.",
+    "visualStorytellingDesc": "Conteudo cinematografico que captura atencao e gera engajamento.",
+    "visualStorytellingBullet1": "Producao & Edicao de Video",
+    "visualStorytellingBullet2": "Cinematografia Aerea com Drone",
+    "visualStorytellingBullet3": "Motion Graphics & Animacao",
+    "visualStorytellingBullet4": "Pacotes de Conteudo para Redes Sociais",
     "growthPerformance": "Crescimento & Performance",
-    "growthPerformanceDesc": "Google Ads, Meta Ads e campanhas orientadas por dados que transformam cliques em clientes.",
+    "growthPerformanceDesc": "Campanhas orientadas por dados que transformam investimento em receita previsivel.",
+    "growthPerformanceBullet1": "Gestao de Google Ads",
+    "growthPerformanceBullet2": "Meta & TikTok Ads",
+    "growthPerformanceBullet3": "Automacao de CRM & Fluxos de Email",
+    "growthPerformanceBullet4": "Otimizacao de Taxa de Conversao",
     "aiLab": "Laboratorio de IA",
-    "aiLabDesc": "Chatbots bilingues, analise preditiva e fluxos automatizados que escalam suas operacoes."
+    "aiLabDesc": "Ferramentas proprietarias de IA construidas especificamente para negocios bilingues. Aqui a tecnologia encontra a inteligencia cultural.",
+    "aiLabBullet1": "Chatbots Bilingues com IA (EN/PT)",
+    "aiLabBullet2": "Analise Preditiva & Tendencias de Mercado",
+    "aiLabBullet3": "Geracao de Conteudo com IA",
+    "aiLabBullet4": "Segmentacao Automatizada de Audiencia"
   },
   "aiLab": {
     "sectionTag": "AI Lab",
+    "exploreButton": "Explorar AI Lab",
     "title1": "INTELIGENCIA",
     "title2": "AO SEU SERVICO",
     "description": "Nosso stack proprietario de IA analisa milhoes de pontos de dados para entregar insights acionaveis, fluxos automatizados e producao criativa.",
@@ -54,27 +120,193 @@
     "capability5": "Inteligencia de Audiencia",
     "capability5Desc": "Segmentacao comportamental profunda e targeting",
     "capability6": "Dashboard de Performance",
-    "capability6Desc": "Relatorios unificados e multiplataforma em tempo real"
+    "capability6Desc": "Relatorios unificados e multiplataforma em tempo real",
+    "metaTitle": "AI Lab | Inteligência Operacional e Automação",
+    "metaDescription": "Transforme seu negócio com nosso AI Lab. Calculadora de ROI, automação inteligente e fluxos personalizados para escalar operações.",
+    "hero": {
+      "badge": "Inteligência Operacional",
+      "headline": "Onde a Inteligência Artificial Encontra o 'Brazilian Hustle'",
+      "subheadline": "Pare de trocar tempo por dinheiro. Comece a construir sistemas que trabalham enquanto você dorme.",
+      "ctaPrimary": "Calcule Seu ROI"
+    },
+    "calculator": {
+      "title": "Calculadora de ROI",
+      "subtitle": "Veja quanto dinheiro você está deixando na mesa.",
+      "inputs": {
+        "adSpend": "Investimento Mensal",
+        "leads": "Leads / Mês",
+        "conversion": "Taxa de Conversão",
+        "dealValue": "Valor Médio (Deal)"
+      },
+      "outputs": {
+        "currentRevenue": "Receita Atual",
+        "projectedRevenue": "Receita Projetada",
+        "annualSavings": "Economia Anual",
+        "roi": "ROI",
+        "bookCall": "Agendar Estratégia"
+      },
+      "perMonth": "/mês",
+      "perYear": "/ano"
+    },
+    "integrations": {
+      "title": "Integração Perfeita Com Sua Stack"
+    },
+    "tools": {
+      "title": "Suíte de Automação Inteligente",
+      "subtitle": "O motor por trás do crescimento 10x.",
+      "badge": "Tecnologia Proprietária",
+      "cards": {
+        "responder": {
+          "title": "Resposta Instantânea",
+          "trigger": "Novo Lead",
+          "action": "SMS + Agenda",
+          "result": "85% mais rápido"
+        },
+        "chat": {
+          "title": "Chat Bilíngue IA",
+          "trigger": "Visita no Site",
+          "action": "Qualificar e Suporte",
+          "result": "Cobertura 24/7"
+        },
+        "reviews": {
+          "title": "Impulsionador de Reviews",
+          "trigger": "Serviço Concluído",
+          "action": "Solicitar Avaliação",
+          "result": "+200% prova social"
+        },
+        "content": {
+          "title": "Reaproveitamento de Conteúdo",
+          "trigger": "Vídeo/Drone Bruto",
+          "action": "Gerar Roteiros/Posts",
+          "result": "10x mais conteúdo"
+        },
+        "scoring": {
+          "title": "Ranking Preditivo",
+          "trigger": "Entrada no CRM",
+          "action": "Pontuar Lead",
+          "result": "Foco no top 1%"
+        }
+      }
+    },
+    "flow": {
+      "title": "Como Funciona",
+      "steps": {
+        "input": "Entrada Caótica",
+        "processing": "Processamento IA",
+        "output": "Saída Lucrativa"
+      }
+    },
+    "comparison": {
+      "title": "Agência Tradicional vs. Dkapture AI",
+      "headers": {
+        "feature": "Recurso",
+        "traditional": "Agência Tradicional",
+        "dkapture": "Dkapture AI"
+      },
+      "rows": {
+        "response": {
+          "feature": "Tempo de Resposta",
+          "traditional": "Horas/Dias",
+          "dkapture": "3 Segundos"
+        },
+        "availability": {
+          "feature": "Disponibilidade",
+          "traditional": "9-18h Seg-Sex",
+          "dkapture": "24/7/365"
+        },
+        "scaling": {
+          "feature": "Escalabilidade",
+          "traditional": "Contratar mais gente",
+          "dkapture": "Instantânea"
+        },
+        "data": {
+          "feature": "Dados",
+          "traditional": "Relatórios Mensais",
+          "dkapture": "Dashboard Tempo Real"
+        }
+      }
+    },
+    "cta": {
+      "title": "Pronto para Automatizar Seu Crescimento?",
+      "description": "Junte-se ao 1% das agências que usam IA de verdade.",
+      "button": "Acessar o AI Lab"
+    }
   },
   "portfolio": {
-    "sectionTag": "Portfolio",
-    "title1": "TRABALHOS",
-    "title2": "SELECIONADOS",
+    "title": "Trabalhos Selecionados",
+    "subtitle": "Descubra como transformamos ideias em histórias de sucesso digital.",
+    "filters": {
+      "all": "Todos",
+      "home-services": "Serviços Domésticos",
+      "gastronomy": "Gastronomia",
+      "real-estate": "Imobiliário",
+      "events": "Eventos",
+      "beauty-wellness": "Beleza e Bem-Estar"
+    },
+    "viewCase": "Ver Case",
+    "sectionTitle": "Cases de Sucesso",
     "filterAll": "Todos",
     "filterHomeServices": "Home Services",
     "filterGastronomy": "Gastronomia",
     "filterRealEstate": "Imoveis",
     "filterEvents": "Eventos",
     "filterBeauty": "Beleza & Bem-Estar",
-    "viewCase": "Ver Case",
-    "loadMore": "Carregar Mais Projetos"
+    "loadMore": "Carregar Mais Projetos",
+    "project1Title": "Sabor Brasileiro",
+    "project1Desc": "Rebranding digital completo e campanha de performance para a principal rede de restaurantes brasileiros de Miami. Pedidos online cresceram 340% em 90 dias.",
+    "project1Metric": "+340%",
+    "project1MetricLabel": "ROAS",
+    "project2Title": "Elite Home Pros",
+    "project2Desc": "Maquina de geracao de leads para empresa de home services. Estrategia Google Ads + SEO que triplicou leads qualificados mes a mes.",
+    "project2Metric": "3x",
+    "project2MetricLabel": "Leads",
+    "project3Title": "Marina Bay Realty",
+    "project3Desc": "Branding imobiliario de luxo com tours virtuais com IA e campanhas Meta direcionadas para compradores de alto poder aquisitivo.",
+    "project3Metric": "$4.2M",
+    "project3MetricLabel": "Em Vendas",
+    "project4Title": "Gala Productions",
+    "project4Desc": "Marketing de eventos completo incluindo cinematografia com drone, campanhas em redes sociais e parcerias com influenciadores. 2M+ views nas plataformas.",
+    "project4Metric": "2M+",
+    "project4MetricLabel": "Views",
+    "project5Title": "Bella Vida Spa",
+    "project5Desc": "Transformacao digital completa para marca de bem-estar. Novo site, sistema de agendamento e estrategia de Instagram que impulsionou receita em 180%.",
+    "project5Metric": "+180%",
+    "project5MetricLabel": "Receita",
+    "project6Title": "Churrasco & Co",
+    "project6Desc": "Identidade de marca, fotografia gastonomica e estrategia viral no TikTok para franquia emergente de churrascaria brasileira expandindo pela Florida.",
+    "project6Metric": "520K",
+    "project6MetricLabel": "Seguidores"
   },
   "insights": {
-    "sectionTag": "Insights",
-    "title1": "ULTIMOS",
-    "title2": "INSIGHTS",
-    "readMore": "Leia Mais",
-    "viewAll": "Ver Todos os Insights"
+    "title": "Insights",
+    "subtitle": "Despachos da fronteira do marketing com IA.",
+    "description": "Estratégias, guias e tendências para empreendedores brasileiros nos EUA.",
+    "viewAll": "Ver todos os insights",
+    "readMore": "Ler Artigo",
+    "readTime": "{minutes} min de leitura",
+    "backToInsights": "Voltar para Insights",
+    "tableOfContents": "Índice",
+    "share": "Compartilhar este artigo",
+    "writtenBy": "Escrito por",
+    "relatedArticles": "Artigos Relacionados",
+    "searchPlaceholder": "Buscar insights...",
+    "noResults": "Nenhum artigo encontrado.",
+    "noResultsDescription": "Tente ajustar sua busca ou filtro para encontrar o que procura.",
+    "categories": {
+      "all": "Todos",
+      "marketing": "Marketing",
+      "ai": "Inteligência Artificial",
+      "business": "Negócios",
+      "video": "Produção de Vídeo",
+      "seo": "SEO & Tráfego"
+    },
+    "newsletter": {
+      "title": "Entre para o Círculo",
+      "description": "Receba as últimas estratégias de marketing com IA semanalmente.",
+      "placeholder": "seu@email.com",
+      "button": "Inscrever-se",
+      "success": "Obrigado por se inscrever!"
+    }
   },
   "cta": {
     "title1": "Pronto para Dominar",
@@ -99,6 +331,14 @@
     "labelGoals": "Conte-nos sobre seus objetivos",
     "placeholderGoals": "O que voce deseja alcancar? Quais desafios esta enfrentando?",
     "submitButton": "Agendar Minha Sessao",
+    "sending": "Enviando...",
+    "successTitle": "Solicitacao Recebida!",
+    "successMessage": "Retornaremos em ate 24 horas. Para uma resposta mais rapida, fale conosco no WhatsApp:",
+    "chatWhatsapp": "Conversar no WhatsApp",
+    "submitAnother": "Enviar outra solicitacao",
+    "preferWhatsapp": "Prefere WhatsApp?",
+    "messageDirectly": "Fale conosco diretamente",
+    "whatsappMessage": "Oi! Gostaria de conversar sobre meu projeto com a Dkapture.",
     "businessTypes": {
       "homeServices": "Home Services",
       "gastronomy": "Gastronomia",
@@ -116,22 +356,684 @@
     }
   },
   "footer": {
-    "newsletterTitle": "Fique a frente da curva",
-    "newsletterPlaceholder": "Seu email",
+    "tagline": "Capturando Visão. Acelerando Crescimento.",
+    "newsletterTitle": "Receba insights de marketing com IA semanalmente",
+    "newsletterPlaceholder": "seu@email.com",
     "newsletterButton": "Inscrever-se",
     "ecosystemTitle": "Ecossistema",
+    "brandIdentity": "Identidade Visual",
+    "digitalPlatforms": "Plataformas Digitais",
+    "visualStorytelling": "Storytelling Visual",
+    "growthPerformance": "Crescimento & Performance",
+    "aiIntelligenceLab": "Laboratório de IA",
     "companyTitle": "Empresa",
-    "contactTitle": "Contato",
-    "aboutUs": "Sobre Nos",
+    "aboutUs": "Sobre Nós",
     "careers": "Carreiras",
-    "privacy": "Privacidade",
-    "terms": "Termos",
-    "copyright": "Dkapture. Todos os direitos reservados."
+    "insightsBlog": "Blog de Insights",
+    "contact": "Contato",
+    "privacyPolicy": "Política de Privacidade",
+    "contactTitle": "Contato",
+    "location": "Miami, FL | Orlando, FL",
+    "copyright": "Dkapture. Todos os direitos reservados.",
+    "madeWith": "Feito com IA & Criatividade Humana"
   },
-  "common": {
-    "learnMore": "Saiba Mais",
-    "getStarted": "Comecar",
-    "contactUs": "Fale Conosco",
-    "backToTop": "Voltar ao Topo"
+  "brandIdentity": {
+    "title": "Identidade Visual & Imagem",
+    "description": "Criamos o DNA visual que torna sua marca inconfundível no mercado americano.",
+    "challenges": [
+      "Marca não se destaca em um mercado saturado",
+      "Linguagem visual inconsistente entre canais",
+      "Baixo valor percebido devido a estética amadora",
+      "Desconexão entre a história da marca e os visuais"
+    ],
+    "solutions": [
+      "Sistema de identidade visual distintivo",
+      "Diretrizes de marca coesas para todas as plataformas",
+      "Estética premium que comanda preços mais altos",
+      "Visuais que amplificam sua narrativa"
+    ],
+    "included": {
+      "logo": {
+        "title": "Logo & Identidade Visual",
+        "description": "Um sistema abrangente incluindo logo principal, variações, paleta de cores e tipografia.",
+        "features": [
+          "Logos Principal & Secundários",
+          "Paleta de Cores",
+          "Sistema Tipográfico",
+          "Diretrizes de Uso"
+        ]
+      },
+      "guidelines": {
+        "title": "Diretrizes de Marca (Brandbook)",
+        "description": "O manual da sua marca para garantir consistência em todos os lugares.",
+        "features": [
+          "O que fazer e não fazer",
+          "Templates de Redes Sociais",
+          "Tom de Voz",
+          "Exemplos de Aplicação"
+        ]
+      },
+      "stationery": {
+        "title": "Papelaria & Colaterais",
+        "description": "Ativos físicos e digitais para profissionalizar sua comunicação.",
+        "features": [
+          "Cartões de Visita",
+          "Papel Timbrado",
+          "Assinaturas de Email",
+          "Decks de Apresentação"
+        ]
+      }
+    },
+    "faqs": {
+      "q1": {
+        "question": "Quanto tempo leva um projeto de branding?",
+        "answer": "Tipicamente 4-6 semanas, dependendo do escopo e número de revisões."
+      },
+      "q2": {
+        "question": "Eu sou dono dos direitos autorais?",
+        "answer": "Sim, após o pagamento final, todos os direitos autorais são transferidos para você."
+      },
+      "q3": {
+        "question": "E se eu não gostar dos conceitos?",
+        "answer": "Incluímos múltiplas rodadas de revisão para garantir que você ame o resultado final."
+      }
+    }
+  },
+  "digitalPlatforms": {
+    "title": "Plataformas Digitais",
+    "description": "Experiências digitais de alta conversão construídas para performance e escala.",
+    "challenges": [
+      "Site não converte visitantes em leads",
+      "Tempos de carregamento lentos prejudicando o SEO",
+      "Experiência mobile ruim",
+      "Difícil de atualizar ou gerenciar conteúdo"
+    ],
+    "solutions": [
+      "Design otimizado para conversão",
+      "Performance ultra-rápida",
+      "Desenvolvimento Mobile-first",
+      "Integração de CMS amigável"
+    ],
+    "included": {
+      "webDesign": {
+        "title": "Web Design Personalizado",
+        "description": "Designs sob medida que refletem a personalidade única da sua marca.",
+        "features": [
+          "Design UX/UI",
+          "Layouts Responsivos",
+          "Elementos Interativos",
+          "Conformidade com Acessibilidade"
+        ]
+      },
+      "ecommerce": {
+        "title": "Soluções de E-commerce",
+        "description": "Lojas online robustas projetadas para maximizar vendas.",
+        "features": [
+          "Shopify/WooCommerce",
+          "Setup de Gateway de Pagamento",
+          "Gestão de Estoque",
+          "Otimização de Checkout"
+        ]
+      },
+      "seo": {
+        "title": "SEO & Performance",
+        "description": "Construído do zero para ranquear alto e carregar rápido.",
+        "features": [
+          "SEO Técnico",
+          "Otimização de Velocidade",
+          "Schema Markup",
+          "Submissão de Sitemap"
+        ]
+      }
+    },
+    "faqs": {
+      "q1": {
+        "question": "Qual plataforma vocês usam?",
+        "answer": "Usamos principalmente Next.js para alta performance, mas também trabalhamos com Shopify e WordPress dependendo das suas necessidades."
+      },
+      "q2": {
+        "question": "A hospedagem está inclusa?",
+        "answer": "Podemos ajudar a configurar a hospedagem, mas a assinatura é tipicamente paga diretamente por você ao provedor."
+      },
+      "q3": {
+        "question": "Vou conseguir editar o site?",
+        "answer": "Sim, integramos um CMS para que você possa atualizar textos e imagens facilmente."
+      }
+    }
+  },
+  "visualStorytelling": {
+    "title": "Storytelling Visual",
+    "description": "Conteúdo cinematográfico que captura a atenção e gera engajamento.",
+    "challenges": [
+      "Baixo engajamento nas redes sociais",
+      "Sensação genérica de banco de imagens",
+      "Incapacidade de explicar produtos complexos",
+      "Postagem de conteúdo inconsistente"
+    ],
+    "solutions": [
+      "Conteúdo de vídeo que prende a atenção",
+      "Filmagens originais autênticas e de alto padrão",
+      "Demos de produtos claros e convincentes",
+      "Calendário de conteúdo consistente"
+    ],
+    "included": {
+      "videoProd": {
+        "title": "Produção de Vídeo",
+        "description": "Produção ponta a ponta para comerciais, reels sociais e vídeos corporativos.",
+        "features": [
+          "Roteiro",
+          "Filmagem",
+          "Edição",
+          "Correção de Cor"
+        ]
+      },
+      "photography": {
+        "title": "Fotografia Profissional",
+        "description": "Imagens de alta resolução para seu site, redes sociais e anúncios.",
+        "features": [
+          "Fotografia de Produto",
+          "Ensaios Lifestyle",
+          "Fotos Corporativas",
+          "Cobertura de Eventos"
+        ]
+      },
+      "drone": {
+        "title": "Cinematografia com Drone",
+        "description": "Vistas aéreas de tirar o fôlego para adicionar valor de produção.",
+        "features": [
+          "Vídeo Aéreo 4K",
+          "Fotografia Aérea",
+          "Pilotos Licenciados FAA",
+          "Inspeções de Local"
+        ]
+      }
+    },
+    "faqs": {
+      "q1": {
+        "question": "Vocês viajam para filmagens?",
+        "answer": "Sim, estamos baseados na Flórida mas viajamos nacional e internacionalmente."
+      },
+      "q2": {
+        "question": "Quem é dono das filmagens brutas?",
+        "answer": "As filmagens brutas podem ser adquiridas por uma taxa adicional; tipicamente entregamos os arquivos editados finais."
+      }
+    }
+  },
+  "growthPerformance": {
+    "title": "Crescimento & Performance",
+    "description": "Campanhas orientadas por dados que transformam investimento em receita previsível.",
+    "challenges": [
+      "Desperdiçando orçamento com públicos errados",
+      "ROI pouco claro das campanhas",
+      "Leads não convertendo em vendas",
+      "Falta de escalabilidade"
+    ],
+    "solutions": [
+      "Segmentação de público precisa",
+      "Dashboards de relatório transparentes",
+      "Otimização de funil para conversão",
+      "Estruturas de campanha escaláveis"
+    ],
+    "included": {
+      "ads": {
+        "title": "Anúncios Pagos",
+        "description": "Gestão especialista de campanhas Google, Meta e TikTok.",
+        "features": [
+          "Desenvolvimento de Estratégia",
+          "Criativo de Anúncio",
+          "Testes A/B",
+          "Gestão de Orçamento"
+        ]
+      },
+      "crm": {
+        "title": "CRM & Automação",
+        "description": "Sistemas para nutrir leads e automatizar follow-ups.",
+        "features": [
+          "Setup de CRM",
+          "Sequências de Email",
+          "Automação de SMS",
+          "Gestão de Pipeline"
+        ]
+      },
+      "seo": {
+        "title": "Otimização de Conversão",
+        "description": "Transformando mais do seu tráfego existente em clientes pagantes.",
+        "features": [
+          "Design de Landing Page",
+          "Otimização de Oferta",
+          "Análise de Mapa de Calor",
+          "Testes de Usuário"
+        ]
+      }
+    },
+    "faqs": {
+      "q1": {
+        "question": "Qual é o orçamento mínimo?",
+        "answer": "Geralmente recomendamos um investimento mínimo em anúncios de $1,500/mês para ver resultados significativos."
+      },
+      "q2": {
+        "question": "Quanto tempo até ver resultados?",
+        "answer": "Anúncios pagos podem gerar leads imediatamente, mas a otimização para ROI máximo tipicamente leva 1-3 meses."
+      }
+    }
+  },
+  "aiLabPage": {
+    "title": "Laboratório de Inteligência IA",
+    "description": "Ferramentas proprietárias de IA construídas especificamente para negócios bilíngues.",
+    "challenges": [
+      "Tempos de resposta lentos para leads",
+      "Barreiras linguísticas com clientes",
+      "Tarefas manuais que consomem tempo",
+      "Falta de dados de interação"
+    ],
+    "solutions": [
+      "Respostas de IA instantâneas 24/7",
+      "Comunicação bilíngue perfeita",
+      "Fluxos de trabalho automatizados",
+      "Insights profundos do cliente"
+    ],
+    "included": {
+      "chatbots": {
+        "title": "Chatbots Bilíngues",
+        "description": "Assistentes inteligentes que qualificam leads em Inglês e Português.",
+        "features": [
+          "Disponibilidade 24/7",
+          "Processamento de Linguagem Natural",
+          "Integração de CRM",
+          "Agendamento de Compromissos"
+        ]
+      },
+      "automation": {
+        "title": "Automação de Workflow",
+        "description": "Conectando seus apps para eliminar trabalho repetitivo.",
+        "features": [
+          "Integrações Zapier/Make",
+          "Faturamento Automático",
+          "Postagem Social",
+          "Entrada de Dados"
+        ]
+      },
+      "analytics": {
+        "title": "Análise Preditiva",
+        "description": "Usando dados para prever tendências e comportamento do cliente.",
+        "features": [
+          "Análise de Tendências",
+          "Previsão de Churn",
+          "Previsão de Vendas",
+          "Análise de Sentimento"
+        ]
+      }
+    },
+    "faqs": {
+      "q1": {
+        "question": "A IA vai substituir minha equipe?",
+        "answer": "Não, a IA é projetada para empoderar sua equipe cuidando de tarefas repetitivas para que eles foquem em trabalho de alto valor."
+      },
+      "q2": {
+        "question": "É seguro?",
+        "answer": "Sim, priorizamos a segurança de dados e usamos criptografia de nível empresarial e padrões de conformidade."
+      }
+    }
+  },
+  "pricing": {
+    "cta": "Começar Agora",
+    "brand": {
+      "essential": "Essencial",
+      "essentialFeatures": [
+        "Design de Logo",
+        "Paleta de Cores",
+        "Tipografia",
+        "Design de Cartão de Visita"
+      ],
+      "professional": "Profissional",
+      "professionalFeatures": [
+        "Tudo no Essencial",
+        "Diretrizes de Marca",
+        "Kit de Redes Sociais",
+        "Assinatura de Email"
+      ],
+      "enterprise": "Enterprise",
+      "enterpriseFeatures": [
+        "Tudo no Profissional",
+        "Ilustrações Personalizadas",
+        "Design de Deck",
+        "Workshop de Estratégia de Marca"
+      ]
+    },
+    "digital": {
+      "essential": "Essencial",
+      "essentialFeatures": [
+        "Site de 5 Páginas",
+        "Responsivo Mobile",
+        "SEO Básico",
+        "Formulário de Contato"
+      ],
+      "professional": "Profissional",
+      "professionalFeatures": [
+        "10+ Páginas",
+        "Integração CMS",
+        "SEO Avançado",
+        "Blog Setup"
+      ],
+      "enterprise": "Enterprise",
+      "enterpriseFeatures": [
+        "Web App Personalizado",
+        "E-commerce",
+        "Integrações API",
+        "Suporte Multi-idioma"
+      ]
+    },
+    "visual": {
+      "contentDay": "Content Day",
+      "contentDayFeatures": [
+        "4 Horas de Filmagem",
+        "20 Fotos Editadas",
+        "3 Reels Sociais",
+        "Sessão de Planejamento"
+      ],
+      "cinema": "Pacote Cinema",
+      "cinemaFeatures": [
+        "Equipe de Produção Completa",
+        "Filme da Marca (2-3min)",
+        "Filmagens de Drone",
+        "Cortes para Social"
+      ],
+      "retainer": "Retainer Mensal",
+      "retainerFeatures": [
+        "Filmagens Mensais",
+        "Fluxo de Conteúdo Consistente",
+        "Agendamento Prioritário",
+        "Estratégia Mensal"
+      ]
+    },
+    "growth": {
+      "starter": "Iniciante",
+      "starterFeatures": [
+        "Google OU Meta Ads",
+        "Relatório Mensal",
+        "Setup Básico de CRM",
+        "Suporte Padrão"
+      ],
+      "growth": "Crescimento",
+      "growthFeatures": [
+        "Google + Meta Ads",
+        "Relatório Quinzenal",
+        "Automação Completa de CRM",
+        "Refresh Criativo"
+      ],
+      "enterprise": "Enterprise",
+      "enterpriseFeatures": [
+        "Estratégia Multi-canal",
+        "Relatório Semanal",
+        "Estrategista Dedicado",
+        "Dashboards Personalizados"
+      ]
+    },
+    "ai": {
+      "basic": "Bot Básico",
+      "basicFeatures": [
+        "Respostas de FAQ",
+        "Captura de Leads",
+        "Notificações por Email",
+        "Suporte Padrão"
+      ],
+      "pro": "Automação Pro",
+      "proFeatures": [
+        "Chatbot Bilíngue",
+        "Integração de CRM",
+        "Agendamento de Compromissos",
+        "Suporte Prioritário"
+      ],
+      "custom": "IA Customizada",
+      "customFeatures": [
+        "Treino de Modelo Personalizado",
+        "Fluxos Complexos",
+        "Desenvolvimento de API",
+        "Servidor Dedicado"
+      ]
+    }
+  },
+  "process": {
+    "discovery": {
+      "step": "Descoberta",
+      "description": "Mergulhamos fundo nos objetivos do seu negócio, público-alvo e desafios atuais."
+    },
+    "strategy": {
+      "step": "Estratégia",
+      "description": "Desenvolvendo um roteiro sob medida para alcançar seus objetivos específicos."
+    },
+    "design": {
+      "step": "Design",
+      "description": "Criando os elementos visuais e experiência do usuário."
+    },
+    "delivery": {
+      "step": "Entrega",
+      "description": "Finalizando ativos e entregando arquivos ou lançando o projeto."
+    },
+    "uxui": {
+      "step": "UX/UI Design",
+      "description": "Criando interfaces intuitivas e bonitas."
+    },
+    "development": {
+      "step": "Desenvolvimento",
+      "description": "Codificando a solução com tecnologia limpa e eficiente."
+    },
+    "launch": {
+      "step": "Lançamento",
+      "description": "Colocando o projeto no mundo."
+    },
+    "preprod": {
+      "step": "Pré-Produção",
+      "description": "Roteiro, storyboard e planejamento logístico."
+    },
+    "production": {
+      "step": "Produção",
+      "description": "Filmando e capturando conteúdo em locação ou estúdio."
+    },
+    "postprod": {
+      "step": "Pós-Produção",
+      "description": "Edição, correção de cor, design de som e efeitos."
+    },
+    "audit": {
+      "step": "Auditoria",
+      "description": "Analisando a performance atual para identificar oportunidades."
+    },
+    "optimize": {
+      "step": "Otimização",
+      "description": "Testes contínuos e refinamento para melhorar resultados."
+    },
+    "scale": {
+      "step": "Escala",
+      "description": "Expandindo alcance e orçamento conforme o ROI é comprovado."
+    },
+    "integration": {
+      "step": "Integração",
+      "description": "Conectando ferramentas de IA com seu stack de software existente."
+    },
+    "training": {
+      "step": "Treinamento",
+      "description": "Ensinando os modelos de IA com seus dados específicos e base de conhecimento."
+    },
+    "optimization": {
+      "step": "Otimização",
+      "description": "Refinando as respostas e lógica da IA ao longo do tempo."
+    }
+  },
+  "caseStudies": {
+    "metrics": {
+      "leads": "Leads Mensais",
+      "leadGrowth": "Crescimento de Leads",
+      "conversion": "Taxa de Conversão",
+      "bookings": "Reservas",
+      "occupancy": "Ocupação",
+      "timeSaved": "Tempo Economizado/Mês",
+      "engagement": "Engajamento",
+      "ranking": "Ranqueamento Google",
+      "sales": "Volume de Vendas"
+    },
+    "sections": {
+      "client": "Cliente",
+      "duration": "Duração",
+      "challenge": "O Desafio",
+      "approach": "Nossa Abordagem",
+      "results": "Os Resultados",
+      "servicesUsed": "Serviços Utilizados",
+      "nextProject": "Próximo Projeto",
+      "prevProject": "Projeto Anterior"
+    },
+    "urbanOasis": {
+      "title": "Urban Oasis",
+      "client": "Imobiliária Rodriguez",
+      "duration": "3 Meses",
+      "challenge": {
+        "description": "A Urban Oasis precisava se destacar em um mercado imobiliário saturado. Seu site anterior convertia menos de 1% e falhava em capturar a essência de luxo de suas propriedades.",
+        "quote": "Éramos invisíveis em um mercado lotado. A Dkapture nos deu uma voz e um rosto em que nossos clientes confiam.",
+        "clientTitle": "CEO",
+        "painPoints": [
+          "Baixa taxa de conversão",
+          "Identidade ultrapassada",
+          "Experiência móvel ruim"
+        ]
+      },
+      "approach": {
+        "step1": {
+          "title": "Descoberta",
+          "description": "Análise do cenário competitivo."
+        },
+        "step2": {
+          "title": "Design",
+          "description": "Criação de identidade visual de luxo."
+        },
+        "step3": {
+          "title": "Desenvolvimento",
+          "description": "Plataforma de listagem de alta performance."
+        }
+      },
+      "gallery": {
+        "1": "Redesign da Homepage",
+        "2": "Visualização móvel das listagens"
+      },
+      "results": {
+        "testimonial": "O ROI tem sido incrível. Vimos uma reviravolta completa em nossa presença digital."
+      }
+    },
+    "neonBistro": {
+      "title": "Neon Bistro",
+      "client": "Grupo Neon",
+      "duration": "2 Meses",
+      "challenge": {
+        "description": "O Neon Bistro lutava para preencher mesas durante a semana, apesar da boa comida.",
+        "quote": "Nossa comida era ótima, mas as mesas estavam vazias. Agora temos filas de espera.",
+        "clientTitle": "Proprietário",
+        "painPoints": [
+          "Baixo movimento semanal",
+          "Invisível nas redes sociais"
+        ]
+      },
+      "approach": {
+        "step1": {
+          "title": "Rebrand",
+          "description": "Identidade vibrante inspirada em neon."
+        },
+        "step2": {
+          "title": "Campanha",
+          "description": "Lançamento de anúncios sociais segmentados."
+        }
+      },
+      "gallery": {
+        "1": "Design do Cardápio"
+      },
+      "results": {
+        "testimonial": "A Dkapture alinhou nossa vibe digital com nossa atmosfera física perfeitamente."
+      }
+    },
+    "techFlow": {
+      "title": "Tech Flow",
+      "client": "Eventos TechFlow",
+      "duration": "4 Meses",
+      "challenge": {
+        "description": "Processos manuais de bilheteria causavam caos.",
+        "quote": "Estávamos nos afogando em planilhas.",
+        "clientTitle": "Gerente de Eventos",
+        "painPoints": [
+          "Processos manuais"
+        ]
+      },
+      "approach": {
+        "step1": {
+          "title": "Automação",
+          "description": "Portal de registro personalizado."
+        }
+      },
+      "results": {
+        "testimonial": "Automatizar nosso fluxo de trabalho nos economizou centenas de horas."
+      }
+    },
+    "bellaVita": {
+      "title": "Bella Vita",
+      "client": "Bella Bem-Estar",
+      "duration": "2 Meses",
+      "challenge": {
+        "description": "Faltava uma marca coesa em todos os canais.",
+        "quote": "Nossa marca parecia desconexa.",
+        "clientTitle": "Fundadora",
+        "painPoints": [
+          "Branding inconsistente"
+        ]
+      },
+      "approach": {
+        "step1": {
+          "title": "Estratégia",
+          "description": "Linguagem visual unificada."
+        }
+      },
+      "results": {
+        "testimonial": "Agora nossa marca conta uma história única e poderosa."
+      }
+    },
+    "smartFix": {
+      "title": "Smart Fix",
+      "client": "Serviços Smart Home",
+      "duration": "3 Meses",
+      "challenge": {
+        "description": "Não apareciam no Google.",
+        "quote": "As pessoas não conseguiam nos encontrar.",
+        "clientTitle": "Diretor",
+        "painPoints": [
+          "SEO ruim"
+        ]
+      },
+      "approach": {
+        "step1": {
+          "title": "SEO",
+          "description": "Reformulação completa de SEO."
+        }
+      },
+      "results": {
+        "testimonial": "Finalmente somos visíveis para quem precisa de nós."
+      }
+    },
+    "eliteHomes": {
+      "title": "Elite Homes",
+      "client": "Propriedades Sterling",
+      "duration": "5 Meses",
+      "challenge": {
+        "description": "Propriedades de alto padrão exigiam apresentação de alto nível.",
+        "quote": "Vendemos luxo, mas nosso site parecia barato.",
+        "clientTitle": "Corretor",
+        "painPoints": [
+          "Incompatibilidade de qualidade"
+        ]
+      },
+      "approach": {
+        "step1": {
+          "title": "Visuais",
+          "description": "Tours 3D e fotografia de alto padrão."
+        }
+      },
+      "results": {
+        "testimonial": "O novo site corresponde ao calibre de nossas listagens."
+      }
+    }
   }
 }

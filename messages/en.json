@@ -1,10 +1,56 @@
 {
+  "metadata": {
+    "title": "DKAPTURE | AI-Powered Digital Marketing Agency",
+    "description": "AI-powered digital marketing agency for Brazilian entrepreneurs in the USA. We build your digital empire with visual storytelling, performance ads, and intelligent automation.",
+    "ogTitle": "DKAPTURE | AI-Powered Digital Marketing Agency",
+    "ogDescription": "We build your digital empire with visual storytelling, performance ads, and AI-powered automation. For Brazilian entrepreneurs conquering the American market."
+  },
   "navigation": {
     "ecosystem": "Ecosystem",
     "portfolio": "Portfolio",
     "aiLab": "AI Lab",
     "insights": "Insights",
     "startProject": "Start Your Project"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "We apologize for the inconvenience. Please try again.",
+    "retry": "Try again",
+    "goHome": "Go Home"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "goHome": "Go Home"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "contactUs": "Contact Us",
+    "backToTop": "Back to Top",
+    "home": "Home",
+    "copyLink": "Copy Link",
+    "shareOnLinkedIn": "Share on LinkedIn",
+    "shareOnTwitter": "Share on Twitter",
+    "linkCopied": "Link Copied!"
+  },
+  "serviceSections": {
+    "theChallenge": "The Challenge",
+    "ourSolution": "Our Solution",
+    "pricingPlans": "Pricing Plans",
+    "pricingDescription": "Clear, transparent pricing. No hidden fees.",
+    "mostPopular": "MOST POPULAR",
+    "whatsIncluded": "What's Included",
+    "ourProcess": "Our Process",
+    "faq": "Frequently Asked Questions",
+    "ctaTitle": "Ready to transform your business?",
+    "ctaDescription": "Let's build something extraordinary together.",
+    "successStories": "Success Stories",
+    "viewAllWork": "View all work",
+    "featuredCaseStudy": "Featured Case Study",
+    "caseStudyPlaceholder": "See how we helped this brand achieve exceptional results through our strategic approach.",
+    "viewCaseStudy": "View Case Study",
+    "the": "The"
   },
   "hero": {
     "badge": "AI-Powered Digital Agency",
@@ -24,22 +70,42 @@
   },
   "services": {
     "sectionTag": "The Ecosystem",
-    "title1": "INTEGRATED",
-    "title2": "SOLUTIONS",
-    "description": "Every service is a node in a connected system. From brand identity to AI-powered growth, each element amplifies the others.",
+    "description": "Five interconnected pillars powering your digital transformation. Each one designed to amplify the others.",
+    "poweredByAi": "Powered by AI",
     "brandIdentity": "Brand Identity & Image",
-    "brandIdentityDesc": "Logo, photography, and visual identity that positions your brand as premium in the American market.",
+    "brandIdentityDesc": "We craft the visual DNA that makes your brand unmistakable in the American market.",
+    "brandIdentityBullet1": "Logo & Visual Identity Systems",
+    "brandIdentityBullet2": "Professional Photography",
+    "brandIdentityBullet3": "Image Consulting & Personal Branding",
+    "brandIdentityBullet4": "Brand Strategy & Positioning",
     "digitalPlatforms": "Digital Platforms",
-    "digitalPlatformsDesc": "High-converting websites and e-commerce platforms built for speed, SEO, and user experience.",
+    "digitalPlatformsDesc": "High-converting digital experiences built for performance and scale.",
+    "digitalPlatformsBullet1": "Custom Web Design & Development",
+    "digitalPlatformsBullet2": "E-commerce & Shopify Solutions",
+    "digitalPlatformsBullet3": "SEO & Technical Optimization",
+    "digitalPlatformsBullet4": "Landing Pages & Funnels",
     "visualStorytelling": "Visual Storytelling",
-    "visualStorytellingDesc": "Cinematic video production, drone footage, and motion graphics that captivate your audience.",
+    "visualStorytellingDesc": "Cinematic content that captures attention and drives engagement.",
+    "visualStorytellingBullet1": "Video Production & Editing",
+    "visualStorytellingBullet2": "Aerial Drone Cinematography",
+    "visualStorytellingBullet3": "Motion Graphics & Animation",
+    "visualStorytellingBullet4": "Social Media Content Packages",
     "growthPerformance": "Growth & Performance",
-    "growthPerformanceDesc": "Google Ads, Meta Ads, and data-driven campaigns that turn clicks into customers.",
+    "growthPerformanceDesc": "Data-driven campaigns that turn ad spend into predictable revenue.",
+    "growthPerformanceBullet1": "Google Ads Management",
+    "growthPerformanceBullet2": "Meta & TikTok Ads",
+    "growthPerformanceBullet3": "CRM Automation & Email Flows",
+    "growthPerformanceBullet4": "Conversion Rate Optimization",
     "aiLab": "AI Intelligence Lab",
-    "aiLabDesc": "Bilingual chatbots, predictive analytics, and automated workflows that scale your operations."
+    "aiLabDesc": "Proprietary AI tools built specifically for bilingual businesses. This is where technology meets cultural intelligence.",
+    "aiLabBullet1": "Bilingual AI Chatbots (EN/PT)",
+    "aiLabBullet2": "Predictive Analytics & Market Trends",
+    "aiLabBullet3": "AI-Powered Content Generation",
+    "aiLabBullet4": "Automated Audience Segmentation"
   },
   "aiLab": {
     "sectionTag": "AI Lab",
+    "exploreButton": "Explore AI Lab",
     "title1": "INTELLIGENCE",
     "title2": "AT YOUR SERVICE",
     "description": "Our proprietary AI stack analyzes millions of data points to deliver actionable insights, automated workflows, and creative output.",
@@ -54,27 +120,193 @@
     "capability5": "Audience Intelligence",
     "capability5Desc": "Deep behavioral segmentation and targeting",
     "capability6": "Performance Dashboard",
-    "capability6Desc": "Unified cross-platform reporting in real time"
+    "capability6Desc": "Unified cross-platform reporting in real time",
+    "metaTitle": "AI Lab | Operational Intelligence & Automation",
+    "metaDescription": "Transform your business with our AI Lab. ROI Calculator, intelligent automation, and custom workflows for scaling operations.",
+    "hero": {
+      "badge": "Operational Intelligence",
+      "headline": "Where Artificial Intelligence Meets Brazilian Hustle",
+      "subheadline": "Stop trading time for money. Start building systems that work while you sleep.",
+      "ctaPrimary": "Calculate Your ROI"
+    },
+    "calculator": {
+      "title": "ROI Calculator",
+      "subtitle": "See how much you're leaving on the table.",
+      "inputs": {
+        "adSpend": "Monthly Ad Spend",
+        "leads": "Leads / Month",
+        "conversion": "Conversion Rate",
+        "dealValue": "Avg. Deal Value"
+      },
+      "outputs": {
+        "currentRevenue": "Current Revenue",
+        "projectedRevenue": "Projected Revenue",
+        "annualSavings": "Annual Savings",
+        "roi": "ROI",
+        "bookCall": "Book a Strategy Call"
+      },
+      "perMonth": "/mo",
+      "perYear": "/yr"
+    },
+    "integrations": {
+      "title": "Seamlessly Integrates With Your Stack"
+    },
+    "tools": {
+      "title": "Intelligent Automation Suite",
+      "subtitle": "The engine behind 10x growth.",
+      "badge": "Proprietary Tech",
+      "cards": {
+        "responder": {
+          "title": "Instant Lead Responder",
+          "trigger": "New Lead",
+          "action": "SMS + Calendar",
+          "result": "85% faster response"
+        },
+        "chat": {
+          "title": "Bilingual AI Chat",
+          "trigger": "Website Visit",
+          "action": "Qualify & Support",
+          "result": "24/7 coverage"
+        },
+        "reviews": {
+          "title": "Review Booster",
+          "trigger": "Service Completed",
+          "action": "Request Review",
+          "result": "+200% social proof"
+        },
+        "content": {
+          "title": "Content Repurposer",
+          "trigger": "Raw Footage",
+          "action": "Generate Scripts",
+          "result": "10x output"
+        },
+        "scoring": {
+          "title": "Predictive Scoring",
+          "trigger": "CRM Entry",
+          "action": "Score Lead",
+          "result": "Focus on top 1%"
+        }
+      }
+    },
+    "flow": {
+      "title": "How It Works",
+      "steps": {
+        "input": "Chaos Input",
+        "processing": "AI Processing",
+        "output": "Profit Output"
+      }
+    },
+    "comparison": {
+      "title": "Traditional Agency vs. Dkapture AI",
+      "headers": {
+        "feature": "Feature",
+        "traditional": "Traditional Agency",
+        "dkapture": "Dkapture AI"
+      },
+      "rows": {
+        "response": {
+          "feature": "Response Time",
+          "traditional": "Hours/Days",
+          "dkapture": "3 Seconds"
+        },
+        "availability": {
+          "feature": "Availability",
+          "traditional": "9-5 Mon-Fri",
+          "dkapture": "24/7/365"
+        },
+        "scaling": {
+          "feature": "Scalability",
+          "traditional": "Hire more people",
+          "dkapture": "Instant"
+        },
+        "data": {
+          "feature": "Data Driven",
+          "traditional": "Monthly Reports",
+          "dkapture": "Real-time Dashboard"
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Automate Your Growth?",
+      "description": "Join the top 1% of agencies leveraging AI.",
+      "button": "Book Your Strategy Session"
+    }
   },
   "portfolio": {
-    "sectionTag": "Portfolio",
-    "title1": "SELECTED",
-    "title2": "WORK",
+    "title": "Selected Work",
+    "subtitle": "Discover how we transform ideas into digital success stories.",
+    "filters": {
+      "all": "All",
+      "home-services": "Home Services",
+      "gastronomy": "Gastronomy",
+      "real-estate": "Real Estate",
+      "events": "Events",
+      "beauty-wellness": "Beauty & Wellness"
+    },
+    "viewCase": "View Case",
+    "sectionTitle": "Success Stories",
     "filterAll": "All",
     "filterHomeServices": "Home Services",
     "filterGastronomy": "Gastronomy",
     "filterRealEstate": "Real Estate",
     "filterEvents": "Events",
     "filterBeauty": "Beauty & Wellness",
-    "viewCase": "View Case",
-    "loadMore": "Load More Projects"
+    "loadMore": "Load More Projects",
+    "project1Title": "Sabor Brasileiro",
+    "project1Desc": "Complete digital rebrand and performance campaign for Miami's premier Brazilian restaurant chain. Grew online orders by 340% in 90 days.",
+    "project1Metric": "+340%",
+    "project1MetricLabel": "ROAS",
+    "project2Title": "Elite Home Pros",
+    "project2Desc": "Lead generation machine for a home services company. Google Ads + SEO strategy that tripled qualified leads month over month.",
+    "project2Metric": "3x",
+    "project2MetricLabel": "Leads",
+    "project3Title": "Marina Bay Realty",
+    "project3Desc": "Luxury real estate branding with AI-powered virtual tours and targeted Meta campaigns reaching high-net-worth buyers.",
+    "project3Metric": "$4.2M",
+    "project3MetricLabel": "In Sales",
+    "project4Title": "Gala Productions",
+    "project4Desc": "End-to-end event marketing including drone cinematography, social media campaigns, and influencer partnerships. 2M+ views across platforms.",
+    "project4Metric": "2M+",
+    "project4MetricLabel": "Views",
+    "project5Title": "Bella Vida Spa",
+    "project5Desc": "Complete digital transformation for a wellness brand. New website, booking system, and Instagram strategy that boosted revenue by 180%.",
+    "project5Metric": "+180%",
+    "project5MetricLabel": "Revenue",
+    "project6Title": "Churrasco & Co",
+    "project6Desc": "Brand identity, food photography, and TikTok viral strategy for an emerging Brazilian steakhouse franchise expanding across Florida.",
+    "project6Metric": "520K",
+    "project6MetricLabel": "Followers"
   },
   "insights": {
-    "sectionTag": "Insights",
-    "title1": "LATEST",
-    "title2": "INSIGHTS",
-    "readMore": "Read More",
-    "viewAll": "View All Insights"
+    "title": "Insights",
+    "subtitle": "Dispatches from the frontier of AI-powered marketing.",
+    "description": "Strategies, guides, and trends for Brazilian entrepreneurs in the US.",
+    "viewAll": "View all insights",
+    "readMore": "Read Article",
+    "readTime": "{minutes} min read",
+    "backToInsights": "Back to Insights",
+    "tableOfContents": "Table of Contents",
+    "share": "Share this article",
+    "writtenBy": "Written by",
+    "relatedArticles": "Related Articles",
+    "searchPlaceholder": "Search insights...",
+    "noResults": "No articles found.",
+    "noResultsDescription": "Try adjusting your search or filter to find what you're looking for.",
+    "categories": {
+      "all": "All",
+      "marketing": "Marketing",
+      "ai": "Artificial Intelligence",
+      "business": "Business",
+      "video": "Video Production",
+      "seo": "SEO & Traffic"
+    },
+    "newsletter": {
+      "title": "Join the Inner Circle",
+      "description": "Get the latest AI marketing strategies delivered to your inbox weekly.",
+      "placeholder": "your@email.com",
+      "button": "Subscribe",
+      "success": "Thanks for subscribing!"
+    }
   },
   "cta": {
     "title1": "Ready to Dominate",
@@ -99,6 +331,14 @@
     "labelGoals": "Tell us about your goals",
     "placeholderGoals": "What are you looking to achieve? What challenges are you facing?",
     "submitButton": "Book My Strategy Call",
+    "sending": "Sending...",
+    "successTitle": "Request Received!",
+    "successMessage": "We'll get back to you within 24 hours. For a faster response, reach us on WhatsApp:",
+    "chatWhatsapp": "Chat on WhatsApp",
+    "submitAnother": "Submit another request",
+    "preferWhatsapp": "Prefer WhatsApp?",
+    "messageDirectly": "Message us directly",
+    "whatsappMessage": "Hi! I'd like to discuss my project with Dkapture.",
     "businessTypes": {
       "homeServices": "Home Services",
       "gastronomy": "Gastronomy",
@@ -116,22 +356,683 @@
     }
   },
   "footer": {
-    "newsletterTitle": "Stay ahead of the curve",
-    "newsletterPlaceholder": "Enter your email",
+    "tagline": "Capturing Vision. Accelerating Growth.",
+    "newsletterTitle": "Get AI marketing insights weekly",
+    "newsletterPlaceholder": "your@email.com",
     "newsletterButton": "Subscribe",
     "ecosystemTitle": "Ecosystem",
+    "brandIdentity": "Brand Identity",
+    "digitalPlatforms": "Digital Platforms",
+    "visualStorytelling": "Visual Storytelling",
+    "growthPerformance": "Growth & Performance",
+    "aiIntelligenceLab": "AI Intelligence Lab",
     "companyTitle": "Company",
-    "contactTitle": "Contact",
     "aboutUs": "About Us",
     "careers": "Careers",
-    "privacy": "Privacy",
-    "terms": "Terms",
-    "copyright": "Dkapture. All rights reserved."
+    "insightsBlog": "Insights Blog",
+    "contact": "Contact",
+    "privacyPolicy": "Privacy Policy",
+    "contactTitle": "Contact",
+    "location": "Miami, FL | Orlando, FL",
+    "copyright": "Dkapture. All rights reserved.",
+    "madeWith": "Made with AI & Human Creativity"
   },
-  "common": {
-    "learnMore": "Learn More",
-    "getStarted": "Get Started",
-    "contactUs": "Contact Us",
-    "backToTop": "Back to Top"
+  "brandIdentity": {
+    "title": "Brand Identity & Image",
+    "description": "We craft the visual DNA that makes your brand unmistakable in the American market.",
+    "challenges": [
+      "Brand doesn't stand out in a saturated market",
+      "Inconsistent visual language across channels",
+      "Low perceived value due to amateur aesthetics",
+      "Disconnect between brand story and visuals"
+    ],
+    "solutions": [
+      "Distinctive visual identity system",
+      "Cohesive brand guidelines for all platforms",
+      "Premium aesthetic that commands higher prices",
+      "Visuals that amplify your narrative"
+    ],
+    "included": {
+      "logo": {
+        "title": "Logo & Visual Identity",
+        "description": "A comprehensive system including primary logo, variations, color palette, and typography.",
+        "features": [
+          "Primary & Secondary Logos",
+          "Color Palette",
+          "Typography System",
+          "Usage Guidelines"
+        ]
+      },
+      "guidelines": {
+        "title": "Brand Guidelines",
+        "description": "The rulebook for your brand to ensure consistency everywhere.",
+        "features": [
+          "Do's and Don'ts",
+          "Social Media Templates",
+          "Tone of Voice",
+          "Application Examples"
+        ]
+      },
+      "stationery": {
+        "title": "Stationery & Collateral",
+        "description": "Physical and digital assets to professionalize your communication.",
+        "features": [
+          "Business Cards",
+          "Letterhead",
+          "Email Signatures",
+          "Presentation Decks"
+        ]
+      }
+    },
+    "faqs": {
+      "q1": {
+        "question": "How long does a branding project take?",
+        "answer": "Typically 4-6 weeks, depending on the scope and number of revisions."
+      },
+      "q2": {
+        "question": "Do I own the copyright?",
+        "answer": "Yes, upon final payment, full copyright is transferred to you."
+      },
+      "q3": {
+        "question": "What if I don't like the concepts?",
+        "answer": "We include multiple rounds of revisions to ensure you love the final result."
+      }
+    }
+  },
+  "digitalPlatforms": {
+    "title": "Digital Platforms",
+    "description": "High-converting digital experiences built for performance and scale.",
+    "challenges": [
+      "Website not converting visitors into leads",
+      "Slow loading times hurting SEO",
+      "Poor mobile experience",
+      "Hard to update or manage content"
+    ],
+    "solutions": [
+      "Conversion-optimized design",
+      "Lightning-fast performance",
+      "Mobile-first development",
+      "User-friendly CMS integration"
+    ],
+    "included": {
+      "webDesign": {
+        "title": "Custom Web Design",
+        "description": "Tailor-made designs that reflect your brand's unique personality.",
+        "features": [
+          "UX/UI Design",
+          "Responsive Layouts",
+          "Interactive Elements",
+          "Accessibility Compliance"
+        ]
+      },
+      "ecommerce": {
+        "title": "E-commerce Solutions",
+        "description": "Robust online stores designed to maximize sales.",
+        "features": [
+          "Shopify/WooCommerce",
+          "Payment Gateway Setup",
+          "Inventory Management",
+          "Checkout Optimization"
+        ]
+      },
+      "seo": {
+        "title": "SEO & Performance",
+        "description": "Built from the ground up to rank high and load fast.",
+        "features": [
+          "Technical SEO",
+          "Speed Optimization",
+          "Schema Markup",
+          "Sitemap Submission"
+        ]
+      }
+    },
+    "faqs": {
+      "q1": {
+        "question": "Which platform do you use?",
+        "answer": "We primarily use Next.js for high performance, but also work with Shopify and WordPress depending on your needs."
+      },
+      "q2": {
+        "question": "Is hosting included?",
+        "answer": "We can help set up hosting, but the subscription is typically paid directly by you to the provider."
+      },
+      "q3": {
+        "question": "Will I be able to edit the site?",
+        "answer": "Yes, we integrate a CMS so you can easily update text and images."
+      }
+    }
+  },
+  "visualStorytelling": {
+    "title": "Visual Storytelling",
+    "description": "Cinematic content that captures attention and drives engagement.",
+    "challenges": [
+      "Low engagement on social media",
+      "Generic stock footage feel",
+      "Unable to explain complex products",
+      "Inconsistent content posting"
+    ],
+    "solutions": [
+      "Scroll-stopping video content",
+      "Authentic, high-end original footage",
+      "Clear, compelling product demos",
+      "Consistent content calendar"
+    ],
+    "included": {
+      "videoProd": {
+        "title": "Video Production",
+        "description": "End-to-end production for commercials, social reels, and corporate videos.",
+        "features": [
+          "Scriptwriting",
+          "Filming",
+          "Editing",
+          "Color Grading"
+        ]
+      },
+      "photography": {
+        "title": "Professional Photography",
+        "description": "High-resolution imagery for your website, social media, and ads.",
+        "features": [
+          "Product Photography",
+          "Lifestyle Shoots",
+          "Corporate Headshots",
+          "Event Coverage"
+        ]
+      },
+      "drone": {
+        "title": "Drone Cinematography",
+        "description": "Breathtaking aerial views to add production value.",
+        "features": [
+          "4K Aerial Video",
+          "Aerial Photography",
+          "FAA Licensed Pilots",
+          "Site Inspections"
+        ]
+      }
+    },
+    "faqs": {
+      "q1": {
+        "question": "Do you travel for shoots?",
+        "answer": "Yes, we are based in Florida but travel nationwide and internationally."
+      },
+      "q2": {
+        "question": "Who owns the raw footage?",
+        "answer": "Raw footage can be purchased for an additional fee; typically we deliver the final edited files."
+      }
+    }
+  },
+  "growthPerformance": {
+    "title": "Growth & Performance",
+    "description": "Data-driven campaigns that turn ad spend into predictable revenue.",
+    "challenges": [
+      "Wasting budget on wrong audiences",
+      "Unclear ROI from campaigns",
+      "Leads not converting to sales",
+      "Lack of scalability"
+    ],
+    "solutions": [
+      "Precise audience targeting",
+      "Transparent reporting dashboards",
+      "Funnel optimization for conversion",
+      "Scalable campaign structures"
+    ],
+    "included": {
+      "ads": {
+        "title": "Paid Advertising",
+        "description": "Expert management of Google, Meta, and TikTok ad campaigns.",
+        "features": [
+          "Strategy Development",
+          "Ad Creative",
+          "A/B Testing",
+          "Budget Management"
+        ]
+      },
+      "crm": {
+        "title": "CRM & Automation",
+        "description": "Systems to nurture leads and automate follow-ups.",
+        "features": [
+          "CRM Setup",
+          "Email Sequences",
+          "SMS Automation",
+          "Pipeline Management"
+        ]
+      },
+      "seo": {
+        "title": "Conversion Optimization",
+        "description": "Turning more of your existing traffic into paying customers.",
+        "features": [
+          "Landing Page Design",
+          "Offer Optimization",
+          "Heatmap Analysis",
+          "User Testing"
+        ]
+      }
+    },
+    "faqs": {
+      "q1": {
+        "question": "What is the minimum budget?",
+        "answer": "We generally recommend a minimum ad spend of $1,500/month to see significant results."
+      },
+      "q2": {
+        "question": "How long until I see results?",
+        "answer": "Paid ads can generate leads immediately, but optimization for peak ROI typically takes 1-3 months."
+      }
+    }
+  },
+  "aiLabPage": {
+    "title": "AI Intelligence Lab",
+    "description": "Proprietary AI tools built specifically for bilingual businesses.",
+    "challenges": [
+      "Slow response times to leads",
+      "Language barriers with clients",
+      "Time-consuming manual tasks",
+      "Lack of interaction data"
+    ],
+    "solutions": [
+      "Instant 24/7 AI responses",
+      "Seamless bilingual communication",
+      "Automated workflows",
+      "Deep customer insights"
+    ],
+    "included": {
+      "chatbots": {
+        "title": "Bilingual AI Chatbots",
+        "description": "Smart assistants that qualify leads in English and Portuguese.",
+        "features": [
+          "24/7 Availability",
+          "Natural Language Processing",
+          "CRM Integration",
+          "Appointment Booking"
+        ]
+      },
+      "automation": {
+        "title": "Workflow Automation",
+        "description": "Connecting your apps to eliminate busywork.",
+        "features": [
+          "Zapier/Make Integrations",
+          "Auto-Invoicing",
+          "Social Posting",
+          "Data Entry"
+        ]
+      },
+      "analytics": {
+        "title": "Predictive Analytics",
+        "description": "Using data to forecast trends and customer behavior.",
+        "features": [
+          "Trend Analysis",
+          "Customer Churn Prediction",
+          "Sales Forecasting",
+          "Sentiment Analysis"
+        ]
+      }
+    },
+    "faqs": {
+      "q1": {
+        "question": "Will AI replace my team?",
+        "answer": "No, AI is designed to empower your team by handling repetitive tasks so they can focus on high-value work."
+      },
+      "q2": {
+        "question": "Is it secure?",
+        "answer": "Yes, we prioritize data security and use enterprise-grade encryption and compliance standards."
+      }
+    }
+  },
+  "pricing": {
+    "cta": "Get Started",
+    "brand": {
+      "essential": "Essential",
+      "essentialFeatures": [
+        "Logo Design",
+        "Color Palette",
+        "Typography",
+        "Business Card Design"
+      ],
+      "professional": "Professional",
+      "professionalFeatures": [
+        "Everything in Essential",
+        "Brand Guidelines",
+        "Social Media Kit",
+        "Email Signature"
+      ],
+      "enterprise": "Enterprise",
+      "enterpriseFeatures": [
+        "Everything in Professional",
+        "Custom Illustrations",
+        "Deck Design",
+        "Brand Strategy Workshop"
+      ]
+    },
+    "digital": {
+      "essential": "Essential",
+      "essentialFeatures": [
+        "5-Page Website",
+        "Mobile Responsive",
+        "Basic SEO",
+        "Contact Form"
+      ],
+      "professional": "Professional",
+      "professionalFeatures": [
+        "10+ Pages",
+        "CMS Integration",
+        "Advanced SEO",
+        "Blog Setup"
+      ],
+      "enterprise": "Enterprise",
+      "enterpriseFeatures": [
+        "Custom Web App",
+        "E-commerce",
+        "API Integrations",
+        "Multi-language Support"
+      ]
+    },
+    "visual": {
+      "contentDay": "Content Day",
+      "contentDayFeatures": [
+        "4 Hours Shooting",
+        "20 Edited Photos",
+        "3 Social Reels",
+        "Planning Session"
+      ],
+      "cinema": "Cinema Package",
+      "cinemaFeatures": [
+        "Full Production Crew",
+        "Brand Film (2-3min)",
+        "Drone Footage",
+        "Social Cutdowns"
+      ],
+      "retainer": "Monthly Retainer",
+      "retainerFeatures": [
+        "Monthly Shoots",
+        "Consistent Content Stream",
+        "Priority Scheduling",
+        "Strategy Monthly"
+      ]
+    },
+    "growth": {
+      "starter": "Starter",
+      "starterFeatures": [
+        "Google OR Meta Ads",
+        "Monthly Reporting",
+        "Basic CRM Setup",
+        "Standard Support"
+      ],
+      "growth": "Growth",
+      "growthFeatures": [
+        "Google + Meta Ads",
+        "Bi-weekly Reporting",
+        "Full CRM Automation",
+        "Creative Refresh"
+      ],
+      "enterprise": "Enterprise",
+      "enterpriseFeatures": [
+        "Multi-channel Strategy",
+        "Weekly Reporting",
+        "Dedicated Strategist",
+        "Custom Dashboards"
+      ]
+    },
+    "ai": {
+      "basic": "Basic Bot",
+      "basicFeatures": [
+        "FAQ Answering",
+        "Lead Capture",
+        "Email Notifications",
+        "Standard Support"
+      ],
+      "pro": "Pro Automation",
+      "proFeatures": [
+        "Bilingual Chatbot",
+        "CRM Integration",
+        "Appointment Booking",
+        "Priority Support"
+      ],
+      "custom": "Custom AI",
+      "customFeatures": [
+        "Custom Model Training",
+        "Complex Workflows",
+        "API Development",
+        "Dedicated Server"
+      ]
+    }
+  },
+  "process": {
+    "discovery": {
+      "step": "Discovery",
+      "description": "We dive deep into your business goals, target audience, and current challenges."
+    },
+    "strategy": {
+      "step": "Strategy",
+      "description": "Developing a roadmap tailored to achieve your specific objectives."
+    },
+    "design": {
+      "step": "Design",
+      "description": "Crafting the visual elements and user experience."
+    },
+    "delivery": {
+      "step": "Delivery",
+      "description": "Finalizing assets and handing off files or launching the project."
+    },
+    "uxui": {
+      "step": "UX/UI Design",
+      "description": "Creating intuitive and beautiful interfaces."
+    },
+    "development": {
+      "step": "Development",
+      "description": "Coding the solution with clean, efficient technology."
+    },
+    "launch": {
+      "step": "Launch",
+      "description": "Deploying the project to the world."
+    },
+    "preprod": {
+      "step": "Pre-Production",
+      "description": "Scripting, storyboarding, and logistics planning."
+    },
+    "production": {
+      "step": "Production",
+      "description": "Filming and capturing content on location or in studio."
+    },
+    "postprod": {
+      "step": "Post-Production",
+      "description": "Editing, color grading, sound design, and effects."
+    },
+    "audit": {
+      "step": "Audit",
+      "description": "Analyzing current performance to identify opportunities."
+    },
+    "optimize": {
+      "step": "Optimize",
+      "description": "Continuous testing and refinement to improve results."
+    },
+    "scale": {
+      "step": "Scale",
+      "description": "Expanding reach and budget as ROI is proven."
+    },
+    "integration": {
+      "step": "Integration",
+      "description": "Connecting AI tools with your existing software stack."
+    },
+    "training": {
+      "step": "Training",
+      "description": "Teaching the AI models on your specific data and knowledge base."
+    },
+    "optimization": {
+      "step": "Optimization"
+    }
+  },
+  "caseStudies": {
+    "metrics": {
+      "leads": "Monthly Leads",
+      "leadGrowth": "Lead Growth",
+      "conversion": "Conversion Rate",
+      "bookings": "Bookings",
+      "occupancy": "Occupancy",
+      "timeSaved": "Time Saved/Mo",
+      "engagement": "Engagement",
+      "ranking": "Google Rank",
+      "sales": "Sales Volume"
+    },
+    "sections": {
+      "client": "Client",
+      "duration": "Duration",
+      "challenge": "The Challenge",
+      "approach": "Our Approach",
+      "results": "The Results",
+      "servicesUsed": "Services Used",
+      "nextProject": "Next Project",
+      "prevProject": "Previous Project"
+    },
+    "urbanOasis": {
+      "title": "Urban Oasis",
+      "client": "Rodriguez Real Estate",
+      "duration": "3 Months",
+      "challenge": {
+        "description": "Urban Oasis needed to stand out in a saturated real estate market. Their previous website was converting at less than 1% and failed to capture the luxury essence of their properties.",
+        "quote": "We were invisible in a crowded market. Dkapture gave us a voice and a face that our clients trust.",
+        "clientTitle": "CEO",
+        "painPoints": [
+          "Low conversion rate",
+          "Outdated brand identity",
+          "Poor mobile experience"
+        ]
+      },
+      "approach": {
+        "step1": {
+          "title": "Discovery",
+          "description": "Analyzed competitor landscape."
+        },
+        "step2": {
+          "title": "Design",
+          "description": "Crafted a luxury visual identity."
+        },
+        "step3": {
+          "title": "Development",
+          "description": "Built a high-performance listing platform."
+        }
+      },
+      "gallery": {
+        "1": "Homepage redesign showcase",
+        "2": "Mobile view of property listings"
+      },
+      "results": {
+        "testimonial": "The ROI has been incredible. We've seen a complete turnaround in our digital presence."
+      }
+    },
+    "neonBistro": {
+      "title": "Neon Bistro",
+      "client": "Neon Group",
+      "duration": "2 Months",
+      "challenge": {
+        "description": "Neon Bistro struggled to fill tables on weeknights despite having great food.",
+        "quote": "Our food was great, but our tables were empty. Now we're booked out weeks in advance.",
+        "clientTitle": "Owner",
+        "painPoints": [
+          "Low weeknight traffic",
+          "Invisible on social media"
+        ]
+      },
+      "approach": {
+        "step1": {
+          "title": "Rebrand",
+          "description": "created a vibrant, neon-inspired identity."
+        },
+        "step2": {
+          "title": "Campaign",
+          "description": "Launched targeted social ads."
+        }
+      },
+      "gallery": {
+        "1": "Menu design"
+      },
+      "results": {
+        "testimonial": "Dkapture aligned our digital vibe with our physical atmosphere perfectly."
+      }
+    },
+    "techFlow": {
+      "title": "Tech Flow",
+      "client": "TechFlow Events",
+      "duration": "4 Months",
+      "challenge": {
+        "description": "Manual ticketing and registration processes were causing chaos.",
+        "quote": "We were drowning in spreadsheets.",
+        "clientTitle": "Event Manager",
+        "painPoints": [
+          "Manual processes"
+        ]
+      },
+      "approach": {
+        "step1": {
+          "title": "Automation",
+          "description": "Built a custom registration portal."
+        }
+      },
+      "results": {
+        "testimonial": "Automating our workflow saved us hundreds of hours."
+      }
+    },
+    "bellaVita": {
+      "title": "Bella Vita",
+      "client": "Bella Wellness",
+      "duration": "2 Months",
+      "challenge": {
+        "description": "Lacked a cohesive brand across channels.",
+        "quote": "Our brand felt disjointed.",
+        "clientTitle": "Founder",
+        "painPoints": [
+          "Inconsistent branding"
+        ]
+      },
+      "approach": {
+        "step1": {
+          "title": "Strategy",
+          "description": "Unified visual language."
+        }
+      },
+      "results": {
+        "testimonial": "Now our brand tells a single, powerful story."
+      }
+    },
+    "smartFix": {
+      "title": "Smart Fix",
+      "client": "Smart Home Services",
+      "duration": "3 Months",
+      "challenge": {
+        "description": "Nowhere to be found on Google.",
+        "quote": "People couldn't find us.",
+        "clientTitle": "Director",
+        "painPoints": [
+          "Poor SEO"
+        ]
+      },
+      "approach": {
+        "step1": {
+          "title": "SEO",
+          "description": "Comprehensive SEO overhaul."
+        }
+      },
+      "results": {
+        "testimonial": "We are finally visible to the people who need us."
+      }
+    },
+    "eliteHomes": {
+      "title": "Elite Homes",
+      "client": "Sterling Properties",
+      "duration": "5 Months",
+      "challenge": {
+        "description": "High-end properties required high-end presentation.",
+        "quote": "We sell luxury, but our site looked cheap.",
+        "clientTitle": "Broker",
+        "painPoints": [
+          "Mismatch in quality"
+        ]
+      },
+      "approach": {
+        "step1": {
+          "title": "Visuals",
+          "description": "3D tours and high-end photography."
+        }
+      },
+      "results": {
+        "testimonial": "The new site matches the caliber of our listings."
+      }
+    }
   }
 }

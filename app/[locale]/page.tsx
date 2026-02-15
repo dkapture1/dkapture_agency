@@ -8,8 +8,23 @@ import { CTASection } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
 
 export default function Page() {
+  const jsonLdLocalBusiness = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Dkapture Agency",
+    "address": [
+      { "@type": "PostalAddress", "addressLocality": "Miami", "addressRegion": "FL", "addressCountry": "US" },
+      { "@type": "PostalAddress", "addressLocality": "Orlando", "addressRegion": "FL", "addressCountry": "US" }
+    ],
+    "url": "https://dkapture.com"
+  };
+
   return (
-    <main className="relative min-h-screen bg-background">
+    <main id="main-content" className="relative min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdLocalBusiness) }}
+      />
       <Navigation />
       <HeroSection />
       <ServicesSection />

@@ -5,33 +5,12 @@ import React from "react";
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Check, ArrowRight, Loader2, MessageCircle, CheckCircle2 } from "lucide-react";
-
-const businessTypes = [
-  "Home Services",
-  "Gastronomy",
-  "Real Estate",
-  "Events",
-  "Beauty & Wellness",
-  "Other",
-];
-
-const revenueRanges = [
-  "Under $10K/mo",
-  "$10K - $50K/mo",
-  "$50K - $200K/mo",
-  "$200K+/mo",
-  "Prefer not to say",
-];
-
-const checklist = [
-  "No obligation",
-  "Bilingual consultation (EN/PT)",
-  "Custom action plan delivered",
-];
+import { useTranslations } from "next-intl";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
 export function CTASection() {
+  const t = useTranslations("cta");
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
   const [formState, setFormState] = useState({
@@ -45,6 +24,29 @@ export function CTASection() {
   const [errorMessage, setErrorMessage] = useState("");
   const [whatsappLink, setWhatsappLink] = useState("");
   const [fieldErrors, setFieldErrors] = useState<Record<string, string[]>>({});
+
+  const businessTypes = [
+    { key: "homeServices", label: t("businessTypes.homeServices") },
+    { key: "gastronomy", label: t("businessTypes.gastronomy") },
+    { key: "realEstate", label: t("businessTypes.realEstate") },
+    { key: "events", label: t("businessTypes.events") },
+    { key: "beautyWellness", label: t("businessTypes.beautyWellness") },
+    { key: "other", label: t("businessTypes.other") },
+  ];
+
+  const revenueRanges = [
+    { key: "under10k", label: t("revenueRanges.under10k") },
+    { key: "10k50k", label: t("revenueRanges.10k50k") },
+    { key: "50k200k", label: t("revenueRanges.50k200k") },
+    { key: "200kPlus", label: t("revenueRanges.200kPlus") },
+    { key: "preferNot", label: t("revenueRanges.preferNot") },
+  ];
+
+  const checklist = [
+    t("noObligation"),
+    t("bilingualConsultation"),
+    t("customActionPlan"),
+  ];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -158,9 +160,9 @@ export function CTASection() {
             className="lg:sticky lg:top-32"
           >
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[0.9] text-foreground">
-              Ready to Dominate
+              {t("title1")}
               <br />
-              the{" "}
+              {t("title2")}
               <span
                 style={{
                   backgroundImage:
@@ -170,14 +172,12 @@ export function CTASection() {
                   backgroundClip: "text",
                 }}
               >
-                American Market?
+                {t("title3")}
               </span>
             </h2>
 
             <p className="mt-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              Book a free 30-minute strategy session. {"We'll"} analyze your
-              current presence and show you exactly how AI-powered marketing can
-              10x your results.
+              {t("description")}
             </p>
 
             {/* Trust badges */}
@@ -195,7 +195,7 @@ export function CTASection() {
                   <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
                 </svg>
                 <span className="text-xs font-medium tracking-wider uppercase">
-                  Partner
+                  {t("googlePartner")}
                 </span>
               </div>
               <div className="flex items-center gap-3 text-muted-foreground/50">
@@ -208,7 +208,7 @@ export function CTASection() {
                   <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0022 12.06C22 6.53 17.5 2.04 12 2.04Z" />
                 </svg>
                 <span className="text-xs font-medium tracking-wider uppercase">
-                  Partner
+                  {t("metaPartner")}
                 </span>
               </div>
             </div>
@@ -264,10 +264,10 @@ export function CTASection() {
                       <CheckCircle2 className="h-8 w-8 text-[#FF4500]" />
                     </div>
                     <h3 className="font-display text-2xl font-bold text-foreground mb-3">
-                      Request Received!
+                      {t("successTitle")}
                     </h3>
                     <p className="text-muted-foreground mb-8 max-w-sm">
-                      {"We'll"} get back to you within 24 hours. For a faster response, reach us on WhatsApp:
+                      {t("successMessage")}
                     </p>
                     {whatsappLink && (
                       <a
@@ -277,7 +277,7 @@ export function CTASection() {
                         className="group inline-flex items-center gap-3 rounded-full bg-[#25D366] px-8 py-4 text-base font-bold text-white transition-all duration-300 hover:shadow-[0_0_30px_rgba(37,211,102,0.4)]"
                       >
                         <MessageCircle className="h-5 w-5" />
-                        Chat on WhatsApp
+                        {t("chatWhatsapp")}
                       </a>
                     )}
                     <button
@@ -287,17 +287,17 @@ export function CTASection() {
                       }}
                       className="mt-6 text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      Submit another request
+                      {t("submitAnother")}
                     </button>
                   </motion.div>
                 ) : (
                   /* ===== FORM STATE ===== */
                   <>
                     <h3 className="font-display text-2xl font-bold tracking-wide text-foreground mb-2">
-                      Book Your Strategy Call
+                      {t("formTitle")}
                     </h3>
                     <p className="text-sm text-muted-foreground mb-8">
-                      Fill out the form and {"we'll"} get back to you within 24 hours.
+                      {t("formDescription")}
                     </p>
 
                     <form onSubmit={handleSubmit} className="flex flex-col gap-5">
@@ -307,14 +307,14 @@ export function CTASection() {
                           htmlFor="cta-name"
                           className="block text-xs font-medium tracking-wider uppercase text-muted-foreground mb-2"
                         >
-                          Name
+                          {t("labelName")}
                         </label>
                         <input
                           id="cta-name"
                           type="text"
                           inputMode="text"
                           autoComplete="name"
-                          placeholder="Your full name"
+                          placeholder={t("placeholderName")}
                           value={formState.name}
                           onChange={(e) =>
                             setFormState({ ...formState, name: e.target.value })
@@ -333,14 +333,14 @@ export function CTASection() {
                           htmlFor="cta-email"
                           className="block text-xs font-medium tracking-wider uppercase text-muted-foreground mb-2"
                         >
-                          Email
+                          {t("labelEmail")}
                         </label>
                         <input
                           id="cta-email"
                           type="email"
                           inputMode="email"
                           autoComplete="email"
-                          placeholder="your@email.com"
+                          placeholder={t("placeholderEmail")}
                           value={formState.email}
                           onChange={(e) =>
                             setFormState({ ...formState, email: e.target.value })
@@ -359,7 +359,7 @@ export function CTASection() {
                           htmlFor="cta-business"
                           className="block text-xs font-medium tracking-wider uppercase text-muted-foreground mb-2"
                         >
-                          Business Type
+                          {t("labelBusiness")}
                         </label>
                         <select
                           id="cta-business"
@@ -374,11 +374,11 @@ export function CTASection() {
                           className="w-full rounded-lg border border-foreground/10 bg-[#0a0a0a] px-4 py-3.5 text-sm text-foreground transition-all duration-300 focus:border-[#FF4500] focus:outline-none focus:shadow-[0_0_20px_rgba(255,69,0,0.1)] appearance-none cursor-pointer disabled:opacity-50"
                         >
                           <option value="" disabled className="text-muted-foreground">
-                            Select your industry
+                            {t("placeholderBusiness")}
                           </option>
                           {businessTypes.map((type) => (
-                            <option key={type} value={type} className="bg-[#0a0a0a]">
-                              {type}
+                            <option key={type.key} value={type.label} className="bg-[#0a0a0a]">
+                              {type.label}
                             </option>
                           ))}
                         </select>
@@ -393,7 +393,7 @@ export function CTASection() {
                           htmlFor="cta-revenue"
                           className="block text-xs font-medium tracking-wider uppercase text-muted-foreground mb-2"
                         >
-                          Monthly Revenue Range
+                          {t("labelRevenue")}
                         </label>
                         <select
                           id="cta-revenue"
@@ -405,15 +405,15 @@ export function CTASection() {
                           className="w-full rounded-lg border border-foreground/10 bg-[#0a0a0a] px-4 py-3.5 text-sm text-foreground transition-all duration-300 focus:border-[#FF4500] focus:outline-none focus:shadow-[0_0_20px_rgba(255,69,0,0.1)] appearance-none cursor-pointer disabled:opacity-50"
                         >
                           <option value="" disabled className="text-muted-foreground">
-                            Select range
+                            {t("placeholderRevenue")}
                           </option>
                           {revenueRanges.map((range) => (
                             <option
-                              key={range}
-                              value={range}
+                              key={range.key}
+                              value={range.label}
                               className="bg-[#0a0a0a]"
                             >
-                              {range}
+                              {range.label}
                             </option>
                           ))}
                         </select>
@@ -425,12 +425,12 @@ export function CTASection() {
                           htmlFor="cta-goals"
                           className="block text-xs font-medium tracking-wider uppercase text-muted-foreground mb-2"
                         >
-                          Tell us about your goals
+                          {t("labelGoals")}
                         </label>
                         <textarea
                           id="cta-goals"
                           rows={4}
-                          placeholder="What are you looking to achieve? What challenges are you facing?"
+                          placeholder={t("placeholderGoals")}
                           value={formState.goals}
                           onChange={(e) =>
                             setFormState({ ...formState, goals: e.target.value })
@@ -462,11 +462,11 @@ export function CTASection() {
                         {status === "loading" ? (
                           <>
                             <Loader2 className="h-5 w-5 animate-spin" />
-                            Sending...
+                            {t("sending")}
                           </>
                         ) : (
                           <>
-                            Book My Strategy Call
+                            {t("submitButton")}
                             <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                           </>
                         )}
@@ -474,14 +474,14 @@ export function CTASection() {
 
                       {/* WhatsApp alternative */}
                       <p className="text-center text-xs text-muted-foreground/60 mt-1">
-                        Prefer WhatsApp?{" "}
+                        {t("preferWhatsapp")}{" "}
                         <a
-                          href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "13055550123"}?text=${encodeURIComponent("Hi! I'd like to discuss my project with Dkapture.")}`}
+                          href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "13055550123"}?text=${encodeURIComponent(t("whatsappMessage"))}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-[#25D366] hover:underline"
                         >
-                          Message us directly
+                          {t("messageDirectly")}
                         </a>
                       </p>
                     </form>

@@ -1,35 +1,20 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { ShutterIcon } from "./shutter-icon";
 
-const capabilities = [
-  {
-    label: "Predictive Analytics",
-    description: "Forecast market trends before your competitors",
-  },
-  {
-    label: "Sentiment Analysis",
-    description: "Bilingual brand perception monitoring",
-  },
-  {
-    label: "Creative AI",
-    description: "Auto-generate on-brand visuals and copy",
-  },
-  {
-    label: "Campaign Optimizer",
-    description: "Real-time budget allocation across channels",
-  },
-  {
-    label: "Audience Intelligence",
-    description: "Deep behavioral segmentation and targeting",
-  },
-  {
-    label: "Performance Dashboard",
-    description: "Unified cross-platform reporting in real time",
-  },
-];
-
 export function AILabSection() {
+  const t = useTranslations('aiLab');
+
+  const capabilities = [
+    { label: t("capability1"), description: t("capability1Desc") },
+    { label: t("capability2"), description: t("capability2Desc") },
+    { label: t("capability3"), description: t("capability3Desc") },
+    { label: t("capability4"), description: t("capability4Desc") },
+    { label: t("capability5"), description: t("capability5Desc") },
+    { label: t("capability6"), description: t("capability6Desc") },
+  ];
   return (
     <section id="ai-lab" className="relative py-32 lg:py-40 overflow-hidden">
       {/* Central glow */}
@@ -46,18 +31,17 @@ export function AILabSection() {
           <div className="inline-flex items-center gap-4 mb-6">
             <span className="h-px w-12 bg-primary" />
             <span className="text-xs font-medium tracking-[0.3em] uppercase text-primary">
-              AI Lab
+              {t("sectionTag")}
             </span>
             <span className="h-px w-12 bg-primary" />
           </div>
           <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-foreground text-balance">
-            INTELLIGENCE
+            {t("title1")}
             <br />
-            <span className="text-muted-foreground">AT YOUR SERVICE</span>
+            <span className="text-muted-foreground">{t("title2")}</span>
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Our proprietary AI stack analyzes millions of data points to deliver
-            actionable insights, automated workflows, and creative output.
+            {t("description")}
           </p>
         </div>
 
@@ -82,7 +66,18 @@ export function AILabSection() {
             </div>
           ))}
         </div>
+
+        {/* CTA */}
+        <div className="mt-16 text-center">
+          <Link
+            href="/ai-lab"
+            className="group inline-flex items-center gap-2 text-sm font-medium uppercase tracking-widest text-primary hover:text-primary/80 transition-colors"
+          >
+            {t("exploreButton")}
+            <span className="block h-px w-8 bg-primary transition-all duration-300 group-hover:w-12" />
+          </Link>
+        </div>
       </div>
-    </section>
+    </section >
   );
 }

@@ -4,94 +4,94 @@ import { useState, useRef } from "react";
 import Image from "next/image";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-type Category =
-  | "All"
-  | "Home Services"
-  | "Gastronomy"
-  | "Real Estate"
-  | "Events"
-  | "Beauty & Wellness";
-
-const categories: Category[] = [
-  "All",
-  "Home Services",
-  "Gastronomy",
-  "Real Estate",
-  "Events",
-  "Beauty & Wellness",
-];
-
-const projects = [
-  {
-    id: 1,
-    title: "Sabor Brasileiro",
-    description:
-      "Complete digital rebrand and performance campaign for Miami's premier Brazilian restaurant chain. Grew online orders by 340% in 90 days.",
-    category: "Gastronomy" as Category,
-    metric: "+340%",
-    metricLabel: "ROAS",
-    image: "/portfolio/restaurant-branding.jpg",
-    size: "large" as const,
-  },
-  {
-    id: 2,
-    title: "Elite Home Pros",
-    description:
-      "Lead generation machine for a home services company. Google Ads + SEO strategy that tripled qualified leads month over month.",
-    category: "Home Services" as Category,
-    metric: "3x",
-    metricLabel: "Leads",
-    image: "/portfolio/home-services.jpg",
-    size: "small" as const,
-  },
-  {
-    id: 3,
-    title: "Marina Bay Realty",
-    description:
-      "Luxury real estate branding with AI-powered virtual tours and targeted Meta campaigns reaching high-net-worth buyers.",
-    category: "Real Estate" as Category,
-    metric: "$4.2M",
-    metricLabel: "In Sales",
-    image: "/portfolio/real-estate.jpg",
-    size: "small" as const,
-  },
-  {
-    id: 4,
-    title: "Gala Productions",
-    description:
-      "End-to-end event marketing including drone cinematography, social media campaigns, and influencer partnerships. 2M+ views across platforms.",
-    category: "Events" as Category,
-    metric: "2M+",
-    metricLabel: "Views",
-    image: "/portfolio/events.jpg",
-    size: "small" as const,
-  },
-  {
-    id: 5,
-    title: "Bella Vida Spa",
-    description:
-      "Complete digital transformation for a wellness brand. New website, booking system, and Instagram strategy that boosted revenue by 180%.",
-    category: "Beauty & Wellness" as Category,
-    metric: "+180%",
-    metricLabel: "Revenue",
-    image: "/portfolio/beauty-wellness.jpg",
-    size: "small" as const,
-  },
-  {
-    id: 6,
-    title: "Churrasco & Co",
-    description:
-      "Brand identity, food photography, and TikTok viral strategy for an emerging Brazilian steakhouse franchise expanding across Florida.",
-    category: "Gastronomy" as Category,
-    metric: "520K",
-    metricLabel: "Followers",
-    image: "/portfolio/gastronomy-brand.jpg",
-    size: "large" as const,
-  },
-];
+const categoryKeys = ["All", "Home Services", "Gastronomy", "Real Estate", "Events", "Beauty & Wellness"] as const;
+type Category = typeof categoryKeys[number];
 
 export function PortfolioSection() {
+  const t = useTranslations('portfolio');
+
+  const categoryLabels: Record<Category, string> = {
+    "All": t("filterAll"),
+    "Home Services": t("filterHomeServices"),
+    "Gastronomy": t("filterGastronomy"),
+    "Real Estate": t("filterRealEstate"),
+    "Events": t("filterEvents"),
+    "Beauty & Wellness": t("filterBeauty"),
+  };
+
+  const categories: Category[] = [
+    "All",
+    "Home Services",
+    "Gastronomy",
+    "Real Estate",
+    "Events",
+    "Beauty & Wellness",
+  ];
+
+  const projects = [
+    {
+      id: 1,
+      title: t("project1Title"),
+      description: t("project1Desc"),
+      category: "Gastronomy" as Category,
+      metric: t("project1Metric"),
+      metricLabel: t("project1MetricLabel"),
+      image: "/portfolio/restaurant-branding.jpg",
+      size: "large" as const,
+    },
+    {
+      id: 2,
+      title: t("project2Title"),
+      description: t("project2Desc"),
+      category: "Home Services" as Category,
+      metric: t("project2Metric"),
+      metricLabel: t("project2MetricLabel"),
+      image: "/portfolio/home-services.jpg",
+      size: "small" as const,
+    },
+    {
+      id: 3,
+      title: t("project3Title"),
+      description: t("project3Desc"),
+      category: "Real Estate" as Category,
+      metric: t("project3Metric"),
+      metricLabel: t("project3MetricLabel"),
+      image: "/portfolio/real-estate.jpg",
+      size: "small" as const,
+    },
+    {
+      id: 4,
+      title: t("project4Title"),
+      description: t("project4Desc"),
+      category: "Events" as Category,
+      metric: t("project4Metric"),
+      metricLabel: t("project4MetricLabel"),
+      image: "/portfolio/events.jpg",
+      size: "small" as const,
+    },
+    {
+      id: 5,
+      title: t("project5Title"),
+      description: t("project5Desc"),
+      category: "Beauty & Wellness" as Category,
+      metric: t("project5Metric"),
+      metricLabel: t("project5MetricLabel"),
+      image: "/portfolio/beauty-wellness.jpg",
+      size: "small" as const,
+    },
+    {
+      id: 6,
+      title: t("project6Title"),
+      description: t("project6Desc"),
+      category: "Gastronomy" as Category,
+      metric: t("project6Metric"),
+      metricLabel: t("project6MetricLabel"),
+      image: "/portfolio/gastronomy-brand.jpg",
+      size: "large" as const,
+    },
+  ];
   const [activeFilter, setActiveFilter] = useState<Category>("All");
   const [showAll, setShowAll] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -123,7 +123,7 @@ export function PortfolioSection() {
         >
           <div className="flex items-center gap-6 mb-8">
             <h2 className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold tracking-tight text-foreground">
-              Success Stories
+              {t("sectionTitle")}
             </h2>
             <span className="hidden sm:block h-px flex-1 bg-[#FF4500]" />
           </div>
@@ -150,7 +150,7 @@ export function PortfolioSection() {
                   : "bg-transparent text-foreground border border-foreground/10 hover:bg-foreground/[0.07]"
               }`}
             >
-              {cat}
+              {categoryLabels[cat]}
             </button>
           ))}
         </motion.div>
@@ -241,7 +241,7 @@ export function PortfolioSection() {
                       href="#"
                       className="group/btn inline-flex items-center gap-2 text-sm font-semibold text-[#FF4500] transition-all duration-300 hover:gap-3"
                     >
-                      View Case
+                      {t("viewCase")}
                       <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
                     </a>
                     <div className="text-right">
@@ -272,7 +272,7 @@ export function PortfolioSection() {
               onClick={() => setShowAll(true)}
               className="inline-flex items-center gap-2 rounded-full border border-[#FF4500]/40 bg-transparent px-8 py-3.5 text-sm font-semibold text-[#FF4500] transition-all duration-300 hover:bg-[#FF4500]/10 hover:border-[#FF4500]"
             >
-              Load More Projects
+              {t("loadMore")}
               <ArrowRight className="h-4 w-4" />
             </button>
           </motion.div>

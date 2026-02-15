@@ -4,22 +4,7 @@ import { useState } from "react";
 import { ShutterIcon } from "./shutter-icon";
 import { Copy, Check, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
-
-const ecosystemLinks = [
-  { label: "Brand Identity", href: "#" },
-  { label: "Digital Platforms", href: "#" },
-  { label: "Visual Storytelling", href: "#" },
-  { label: "Growth & Performance", href: "#" },
-  { label: "AI Intelligence Lab", href: "#" },
-];
-
-const companyLinks = [
-  { label: "About Us", href: "#" },
-  { label: "Careers", href: "#" },
-  { label: "Insights Blog", href: "#" },
-  { label: "Contact", href: "#" },
-  { label: "Privacy Policy", href: "#" },
-];
+import { useTranslations } from "next-intl";
 
 const socialLinks = [
   {
@@ -65,6 +50,24 @@ const email = "hello@dkapture.com";
 type NewsletterStatus = "idle" | "loading" | "success" | "error";
 
 export function Footer() {
+  const t = useTranslations("footer");
+
+  const ecosystemLinks = [
+    { label: t("brandIdentity"), href: "#" },
+    { label: t("digitalPlatforms"), href: "#" },
+    { label: t("visualStorytelling"), href: "#" },
+    { label: t("growthPerformance"), href: "#" },
+    { label: t("aiIntelligenceLab"), href: "#" },
+  ];
+
+  const companyLinks = [
+    { label: t("aboutUs"), href: "#" },
+    { label: t("careers"), href: "#" },
+    { label: t("insightsBlog"), href: "#" },
+    { label: t("contact"), href: "#" },
+    { label: t("privacyPolicy"), href: "#" },
+  ];
+
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [newsletterStatus, setNewsletterStatus] = useState<NewsletterStatus>("idle");
   const [newsletterMessage, setNewsletterMessage] = useState("");
@@ -86,7 +89,7 @@ export function Footer() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8 py-10">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             <p className="text-base font-medium text-foreground">
-              Get AI marketing insights weekly
+              {t("newsletterTitle")}
             </p>
             <form
               onSubmit={async (e) => {
@@ -122,18 +125,17 @@ export function Footer() {
                   <input
                     type="email"
                     inputMode="email"
-                    placeholder="your@email.com"
+                    placeholder={t("newsletterPlaceholder")}
                     value={newsletterEmail}
                     onChange={(e) => {
                       setNewsletterEmail(e.target.value);
                       if (newsletterStatus === "error") setNewsletterStatus("idle");
                     }}
                     disabled={newsletterStatus === "loading"}
-                    className={`w-full sm:w-72 rounded-full border bg-[#0a0a0a] px-5 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 transition-all duration-300 focus:outline-none focus:shadow-[0_0_15px_rgba(255,69,0,0.1)] disabled:opacity-50 ${
-                      newsletterStatus === "error"
-                        ? "border-red-400 focus:border-red-400"
-                        : "border-foreground/10 focus:border-[#FF4500]"
-                    }`}
+                    className={`w-full sm:w-72 rounded-full border bg-[#0a0a0a] px-5 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 transition-all duration-300 focus:outline-none focus:shadow-[0_0_15px_rgba(255,69,0,0.1)] disabled:opacity-50 ${newsletterStatus === "error"
+                      ? "border-red-400 focus:border-red-400"
+                      : "border-foreground/10 focus:border-[#FF4500]"
+                      }`}
                     aria-label="Email for newsletter"
                   />
                   <button
@@ -144,7 +146,7 @@ export function Footer() {
                     {newsletterStatus === "loading" ? (
                       <Loader2 className="h-4 w-4 animate-spin" />
                     ) : (
-                      "Subscribe"
+                      t("newsletterButton")
                     )}
                   </button>
                 </>
@@ -172,7 +174,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-sm leading-relaxed text-[#666666] mb-6">
-              Capturing Vision. Accelerating Growth.
+              {t("tagline")}
             </p>
 
             {/* Social icons */}
@@ -193,7 +195,7 @@ export function Footer() {
           {/* Ecosystem links */}
           <div>
             <h4 className="font-display text-sm font-bold tracking-wider text-foreground mb-6">
-              Ecosystem
+              {t("ecosystemTitle")}
             </h4>
             <ul className="flex flex-col gap-3.5">
               {ecosystemLinks.map((link) => (
@@ -212,7 +214,7 @@ export function Footer() {
           {/* Company links */}
           <div>
             <h4 className="font-display text-sm font-bold tracking-wider text-foreground mb-6">
-              Company
+              {t("companyTitle")}
             </h4>
             <ul className="flex flex-col gap-3.5">
               {companyLinks.map((link) => (
@@ -231,12 +233,12 @@ export function Footer() {
           {/* Contact column */}
           <div>
             <h4 className="font-display text-sm font-bold tracking-wider text-foreground mb-6">
-              Contact
+              {t("contactTitle")}
             </h4>
             <ul className="flex flex-col gap-4">
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <span className="text-xs">&#127482;&#127480;</span>
-                Miami, FL | Orlando, FL
+                {t("location")}
               </li>
               <li>
                 <button
@@ -278,10 +280,10 @@ export function Footer() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-xs text-[#666666]">
-              &copy; 2026 Dkapture. All rights reserved.
+              &copy; 2026 {t("copyright")}
             </p>
             <div className="flex items-center gap-2 text-xs text-[#666666]">
-              Made with AI & Human Creativity
+              {t("madeWith")}
               <motion.span
                 className="inline-block h-2 w-2 rounded-full bg-[#FF4500]"
                 animate={{ opacity: [0.4, 1, 0.4] }}

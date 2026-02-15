@@ -9,6 +9,6 @@ export const config = {
   // - Static files (/_next/..., /images/..., etc.)
   // - Specific files (favicon.ico, robots.txt, sitemap.xml, etc.)
   matcher: [
-    "/((?!api|_next|_vercel|images|portfolio|.*\\..*).*)",
+    "/((?!api|_next|_vercel|images|.*\\..*).*)",
   ],
 };
